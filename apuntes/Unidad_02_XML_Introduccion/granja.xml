@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<granja nombre="pedro" localizacion="lucena">
+
+	<pedido id="1" fechaentrega="10-11-2013" fechacobro="20-11-2013" >
+  
+  		<vaca tipo="lechera" cantidad="20">
+			<coste xum="100" />    
+   			<productos>
+				<leche lxud="5" precio="1exl"/>
+   			</productos>
+   		</vaca>
+    
+		<vaca tipo="carne" cantidad="15">
+    		<coste xum="150" />    
+    		<productos>
+     			<carne xu="100kg" precio="10exk"/>
+     		</productos>
+   		</vaca> 
+   
+		<vaca tipo="carnebuena" cantidad="5">
+			<coste xum="200" />    
+			<productos>
+				<carne xu="100kg" precio="15exk"/>
+			</productos>
+		</vaca> 
+
+		<gallina tipo="ponedora" cantidad="120">
+			<coste xum="20" />    
+			<productos>
+				<huevo xud="2" precio="2exd"/>
+			</productos>
+		</gallina> 
+  
+		<gallina tipo="pollocarne" cantidad="80">
+			<coste xum="40" />    
+			<productos>
+				<carne xu="5kg" precio="8exk"/>
+			</productos>
+  		</gallina>
+
+	</pedido>
+
+</granja>

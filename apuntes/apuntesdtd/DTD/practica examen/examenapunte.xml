@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "examenapunte.dtd">
+
+<tienda direccion="calle sillon" nombre="mueblesmauricio" telefono="555555555">
+
+<sillas>
+
+    <silla codigo="cri" materiales="cristal">
+        <nombre>sillacristalium</nombre>
+        <precio coste="130€"/>
+        <agotado />
+    </silla>
+
+    <silla codigo="dia">
+        <nombre>supersilladia %Montada;</nombre>
+        <precio coste="40€"/>
+        <existencias>12</existencias>
+
+    </silla>
+
+</sillas>
+
+<ofertas>
+
+    <oferta coste="45">-30%
+        <exclusiva codigosilla="cri" sillamixta="cri dia"></exclusiva>
+    </oferta>
+
+</ofertas>
+
+</tienda>

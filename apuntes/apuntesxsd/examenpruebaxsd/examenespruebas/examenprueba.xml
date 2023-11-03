@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Correos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="examenprueva.xsd">
+Un monto de correos
+
+  <!-- Este de aqui es el elemento vacio-->
+  <CorreoVacio />
+
+  <!-- Este de aqui es el elemento con contenido mixto-->
+  <CorreoMixto>
+    <Codigo>45adsfsdf</Codigo>
+    <Codigo>324</Codigo>
+    
+  </CorreoMixto>
+
+  <!--Este de aqui es el elemento con Atributos que contiene conetenido texto y numeros enteros-->
+  <Correoconatributos>
+    SFJHSDFH54646
+  </Correoconatributos>
+
+  <!--Aquie esta el elemento con xs:sequence-->
+  <CorreoSecuencia>
+    <CorreoSecue1>093583498</CorreoSecue1>
+    <Correasecua2>sefgueifheui</Correasecua2>
+  </CorreoSecuencia>
+
+  <!--En este elemento se usa xs:choice-->
+  <CorreoEleccion>
+    <Correo1></Correo1>
+  </CorreoEleccion>
+  
+  <CorreoTodo>
+    <CorreoDos></CorreoDos>
+    <CorreoCuatro></CorreoCuatro>
+    <CorreoUno></CorreoUno>
+    <CorreoTres></CorreoTres>
+  </CorreoTodo>
+
+  <CorreoPosValor>KorreoUno</CorreoPosValor>
+
+  <Correo_valores_de_0_a_100>100</Correo_valores_de_0_a_100>
+
+  <Correo_valores_de_0_a_1000>1000</Correo_valores_de_0_a_1000>
+
+  <!-- Elemento con patrones-->
+  <CorreoPatronDNI>45312442C</CorreoPatronDNI>
+
+  <CorreoMatricula>3240Adz</CorreoMatricula>
+
+  <CorreoMAC>12:12:12:12:12:12</CorreoMAC>
+
+  <CorreoColor>Rojo</CorreoColor>
+  <CorreoColor>Azul</CorreoColor>
+  <CorreoColor>Verde</CorreoColor>
+
+<!--Elemento con union-->
+<CorreoUnion>Azul</CorreoUnion>
+
+<!--Elemento con derivado simple-->
+<CorreoDerivadoSimple>41</CorreoDerivadoSimple>
+
+<!--Elemnto con derivado complejo-->
+<CorreoDerivadoComplejo>
+  <CorNombre>nombre1</CorNombre>
+  <CorAmigo>amigo2</CorAmigo>
+  <CorreoPrin>pricipal1</CorreoPrin>
+</CorreoDerivadoComplejo>
+</Correos>

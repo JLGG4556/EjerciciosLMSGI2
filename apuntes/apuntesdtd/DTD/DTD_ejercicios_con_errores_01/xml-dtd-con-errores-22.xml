@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaCompra [
+  <!ELEMENT listaCompra (leche, pan)>
+  <!ELEMENT leche EMPTY>
+<!ELEMENT pan EMPTY>
+  <!ATTLIST leche cantidad NMTOKENS #IMPLIED>
+  <!ATTLIST pan cantidad NMTOKENS #IMPLIED>
+  
+]>
+
+<listaCompra>
+  <leche cantidad="12 litros" />
+  <pan cantidad="3 barras de cuarto" />
+</listaCompra>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe (#PCDATA)>
+  <!ENTITY marvel "Ediciones Marvel">
+]>
+<marvel>
+  <superheroe>Thor el de &marvel;</superheroe>
+  <superheroe>Hulk</superheroe>
+  <superheroe>Iron Man</superheroe>
+</marvel>

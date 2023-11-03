@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PCs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PCs.xsd">
+    Un monto de tostadoras 
+    
+    <Ordenadores>
+    <Sobremesa>sada34</Sobremesa>
+        
+    <Portatil>5463fgsf</Portatil>
+</Ordenadores>
+
+<Usuarios>Administrador</Usuarios>
+
+<usuariosNormales>34</usuariosNormales>
+
+<ususariosInvitados>324</ususariosInvitados>
+</PCs>

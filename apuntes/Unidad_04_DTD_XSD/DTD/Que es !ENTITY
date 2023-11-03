@@ -1,0 +1,54 @@
+<!-- La entidades son alia que establecemos sobre diferentes tipos de ibjetos-->
+
+<!--Tenemos la interna que sirve para crear un alias dentro del mismo fichero dtd-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+<!ELEMENT marvel (superheroe*)>
+<!ELEMENT superheroe (#PCDATA)>
+<!ENTITY marvel "Ediciones Marvel"> <!--El alias es ediciones marvel-->
+]>
+
+<marvel>
+
+<superheroe>Thor el de &marvel;</superheroe> <!--Aqui se usa el alias-->
+<superheroe>Hulk</superheroe>
+<superheroe>Iron Man</superheroe>
+
+</marvel>
+
+<!--La entidad general externa permite que el alias referenciado se encuentre fuera del fichero dtd-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+<!ELEMENT marvel (#PCDATA)>
+<!ENTITY marvel "Ediciones Marvel"> <!-- -->
+<!ENTITY vengadores SYSTEM "superheroes.txt"> <!-- -->
+]>
+<marvel>El equipo de vengadores &marvel; consta de
+&vengadores;</marvel>
+
+<!--La entidad parametro es un alias para un codigo que utilizamos dentro del propio DTD -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+<!ENTITY marvel "Ediciones Marvel">
+<!ENTITY vengadores SYSTEM "superheroes.txt">
+
+<!-- Endtidad parametro-->
+<!ENTITY % caracteristicasHeroe "<!ATTLIST 
+superheroe nombre CDATA #REQUIRED color CDATA
+#IMPLIED>">
+<!ELEMENT marvel (superheroe)>
+<!ELEMENT superheroe (#PCDATA)>
+
+<!--El alias -->
+%caracteristicasHeroe;
+]>
+
+<marvel>
+
+<superheroe nombre="Thor" color="azul">Su historia es
+muy buena</superheroe>
+
+</marvel>

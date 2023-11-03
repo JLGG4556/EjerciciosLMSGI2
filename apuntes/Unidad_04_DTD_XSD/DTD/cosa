@@ -1,0 +1,7 @@
+
+<!--Refencia al raiz nodo: el elemento superheroes esta compuesto por un conjunto de elementos superheroe-->
+<!ELEMENT superheroes (superheroe*)>
+<!--Definicion del elemto superheroe en la que unicamente expecificamos un texto libre-->
+<!ELEMENT superheroe (#PCDATA)>
+
+<!--No se admineten ñ ni acentos-->

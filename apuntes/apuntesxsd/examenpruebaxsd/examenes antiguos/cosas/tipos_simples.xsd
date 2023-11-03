@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="superheroe" type="nombreSuperheroe"/>
+
+<!--Tipo simple-->
+<xs:simpleType name="nombreSuperheroe">
+
+<!--Para crear restriciones en los tipos simples hay que usar <xs:restriction>
+    si no se usa por defecto se usa any (cualquier cosa)-->
+<!--Tipo primitivo xs:string-->
+<xs:restriction base="xs:string">
+<xs:minLength value="1" />
+</xs:restriction>
+
+</xs:simpleType>
+
+</xs:schema>
+
+<!-- Las retricciones son
+
+xs:minInclusive: límite inferior de un intervalo de valores, con el límite
+incluido. Se usa en tipos numéricos y de fecha y hora.
+
+xs:maxInclusive: límite superior de un intervalo de valores, con el límite
+incluido. Se usa en tipos numéricos y de fecha y hora.
+
+xs:minExclusive: límite inferior de un intervalo de valores, no tiene limite
+se usa en numericos fechas y horas
+
+xs:maxExclusive: límite superior de un intervalo de valores, con el límite
+no incluido. Se usa en tipos numéricos y de fecha y hora.
+
+xs:enumeration: lista de valores admitidos. Se usa en cualquier tipo de
+datos.
+
+xs:pattern: patrón o expresión regular. Se usa en tipos de datos de texto.
+
+xs:pattern: patrón o expresión regular. Se estudiará a fondo un poco más
+adelante. Se usa en tipos de datos de texto.
+
+xs:whitespace: especifica lo que hacer con los espacios en blanco, saltos
+de línea, retornos de carro y tabuladores. 
+Los valores aceptados son:
+preserve (conservar), replace (reemplazar por espacios en blanco) y
+
+collapse (convertir en un sólo espacio). Se usa en tipos de datos de texto
+
+xs:length: longitud exacta de caracteres. Se usa en tipos de datos de
+texto.
+
+xs:minLength: longitud mínima de caracteres. Se usa en tipos de datos de
+texto.
+
+xs:maxLength: longitud máxima de caracteres. Se usa en tipos de datos
+de texto.
+
+xs:fractionDigits: número máximo de posiciones decimales en números
+flotantes. Sólo se usa en datos numéricos flotantes.
+
+xs:totalDigits: número exacto de dígitos. Se usa en datos de tipo
+numérico.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    Uso de la restriccion xs:pattern
+
+    Esta es la sintaxis que permite 8 digitos y una letra(la que sea de la A mayuscula a Z mayuscula)
+    <xs:pattern value="\d{8}[A-Z]" />
+
+    . -> Representa cualquier caracter.
+
+    \w -> Cualquier letra, mayúscula o minúscula.
+
+    \d -> Un dígito.
+
+    \D -> Cualquier carácter que no sea un dígito.
+
+    \s -> Cualquier carácter similar a un espacio, como tabuladores, saltos de
+    línea, etc.
+
+    \S -> Cualquier carácter que no sea similar a un espacio.
+
+    [abc] -> Cualquiera de los caracteres contenidos dentro de los corchetes,
+    sólo se permitirá un único carácter.
+    Es de decir la a o la b o la c las tres no y solo una de esas
+
+    [A-Z] -> Intervalo de valores, se permitirá cualquiera que este dentro del
+    intervalo. Recuerda que los caracteres están representados a través de
+    datos numéricos.
+
+    [^abc] -> Significa cualquier caracter que no sea alguno de los contenidos
+    entre corchetes. 
+    Esto es una exclusion
+
+    (a|b) -> uno de los dos caracteres. A efectos prácticos sería igual a [ab].
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Cardinalidad de la ocurrencias
+    ? -> De 0 a 1 ocurrencias.
+    * -> De 0 a infinitas ocurrencias.
+    + -> De 1 a infinitas ocurrencias.
+
+    {n} -> n ocurrencias.
+    {n,m} -> Mínimo de n ocurrencias y máximo de m.
+    {n,} -> Mínimo de n ocurrencias y máximo de infinitas.
+-->

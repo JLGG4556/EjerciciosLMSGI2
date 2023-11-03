@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel  SYSTEM "17-dtd-interno-entidad-parametro-solo-atributos.dtd">
+<marvel>
+  <superheroe nombre="Thor" color="azul">Su historia es muy buena</superheroe>
+  <villano nombre="Loki" color="negro">Hermano adoptivo de Thor</villano>
+</marvel>

@@ -1,0 +1,11 @@
+<!--
+    #IMPLIED. El atributo es opcional
+
+    #REQUIRED. El atributo es obligatorio, pero no tiene valor por defecto.
+
+    #FIXED. El atributo es obligatorio y tiene por defecto un valor, el único
+    que puede tomar.
+
+
+-->
+

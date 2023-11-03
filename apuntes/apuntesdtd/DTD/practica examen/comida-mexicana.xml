@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurante SYSTEM "comida-mexicana.dtd">
+<restaurante direccion="Calle el taquito" nombre="El tacazo" telefono="957591456">
+  <platos>
+    <plato codigo="ques" ingredientePrincipal="queso">
+      <nombre>Quesadillas</nombre>
+      <casero/>
+      <precio coste="6" />
+      <existencias />
+    </plato>
+    <plato codigo="ench">
+      <nombre>Enchilada &picante;</nombre>
+      <precio coste="20" />
+      <agotado />
+    </plato>
+  </platos>
+  <ofertas>
+    <oferta coste="15">2x1 
+      <platoReferido codigoPlato="ques" platoCombinado="ques ench" />
+    </oferta>
+  </ofertas>
+</restaurante>

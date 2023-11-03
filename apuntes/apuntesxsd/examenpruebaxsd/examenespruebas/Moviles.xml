@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="Moviles.xsd">
+  un montón de moviles y fundas
+<!-- -->
+  <Moviles>
+    un monton de moviles
+    <funda color="Azul">Super resistente</funda>
+    <cargador potencia="12.5">12.5</cargador>
+    <cable logitud="1.0m"/>
+    <memoria />
+  </Moviles>
+
+</Tienda>

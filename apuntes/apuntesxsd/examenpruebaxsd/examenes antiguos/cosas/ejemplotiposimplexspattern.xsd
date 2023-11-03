@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="superheroe" type="nombreSuperheroe"/>
+  
+  <xs:simpleType name="nombreSuperheroe">
+    <xs:restriction base="xs:string">
+        <!-- Esto es un correo electronico
+        \w+ de 1 a infinitos caracteres aprece la @ otra vez \w+ aparece un punto y de nuevo \w+-->
+      <xs:pattern value="\w+@\w+[.]\w+" />
+    </xs:restriction>  
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!NOTATION JPG SYSTEM "image/jpeg">
+  <!NOTATION GIF SYSTEM "image/gif">
+  <!NOTATION PNG SYSTEM "image/png">
+  
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe (#PCDATA)>
+  <!ATTLIST superheroe nombre CDATA #REQUIRED
+                       tipoImagen NOTATION (GIF | JPG | PNG) #IMPLIED>
+]>
+<marvel>
+  <superheroe nombre="Thor" tipoImagen="PNG">Un Dios</superheroe>
+</marvel>

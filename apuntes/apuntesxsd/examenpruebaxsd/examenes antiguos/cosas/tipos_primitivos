@@ -1,0 +1,63 @@
+<!--
+Numéricos:
+
+float: flotante de 32 bits.
+double: flotante de 64 bits.
+
+decimal: número real en notación científica.
+integer: cualquier número entero.
+
+nonPositiveInteger: enteros negativos y cero
+negativeInteger: menores que cero.
+nonNegativeInteger: enteros positivos y cero
+positiveInteger: enteros positivos.
+
+unsignedLong: enteros positivos de 64 bits.
+
+unsignedInt: enteros positivos de 32 bits.
+unsignedByte: enteros positivos de 8 bits.
+
+long, int, short, byte: enteros que utilizan su primer bit para el signo, sus precisiones son de 63, 31, 15 y 7 bits
+respectivamente
+
+dateTime: fecha y hora en formato aaaa-MM-dd T hh:mm:ss.
+año mes dia zonahoraria hora minutos segundos
+
+gDay: sólo día en formado dd.
+gMonth: sólo mes en formado MM.
+gYear: sólo año en formato aaaa.
+gYearMonth: sólo año y mes en formato aaaa-MM.
+gMonthDay: sólo mes y día en formato MM-dd.
+
+-->
+
+<!--
+Texto
+
+string: cadena de texto.
+
+normalizedString: cadena de texto donde los tabuladores,
+nuevas líneas y retornos de carro se convierten en espacios
+simples.
+
+token: cadena de texto sin espacios delante y detras, sin
+tabulador, ni nuevas líneas o retornos de carro y con
+espacios simples en su interior.
+
+ID: tipo de datos para atributo, debe ser único en el
+documento, compatible con DTD.
+
+IDREF: referencia a un ID, compatible con DTD y utilizado sólo en atributos.
+
+En compatibilidad con DTD, además de ID e IDREF, también
+encontramos los tipos IDREFS, ENTITY, ENTITIES y NOTATION.
+-->
+
+<!--
+Binarios:
+hexBinary: secuencia de dígitos en base 16 o hexadecimales.
+base64Binary: secuencia de dígitos en base 64.
+
+Booleanos: valores falso verdadero
+
+-->

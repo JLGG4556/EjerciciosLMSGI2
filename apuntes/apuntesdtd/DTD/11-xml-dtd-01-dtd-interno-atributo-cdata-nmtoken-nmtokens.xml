@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe EMPTY>
+  <!ATTLIST superheroe nombre CDATA #REQUIRED
+                       edad NMTOKEN #IMPLIED
+                       aliados NMTOKENS #IMPLIED>
+]>
+<marvel>
+  <superheroe nombre="Thor     el     que      se     fue    a      la      isla"/>
+  <superheroe nombre="Hulk" edad="68"/>
+  <superheroe nombre="Iron Man" edad="45" aliados="Thor Hulk Captain"/>
+</marvel>

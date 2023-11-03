@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--!DOCTYPE -> Definición del tipo de documento. Enlace al fichero DTD con
+el que se valida el documento XML.-->
+
+<!DOCTYPE superheroes SYSTEM "jlgg4556Apuntes.dtd">
+<superheroes>
+<superheroe>Hulk</superheroe>
+
+<superheroe>Iron Man</superheroe>
+<superheroe>Thor</superheroe>
+</superheroes>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe EMPTY>
+  <!ATTLIST superheroe nombre CDATA #IMPLIED>
+  <!ATTLIST superheroe edad CDATA #IMPLIED>
+  <!ATTLIST superheroe color CDATA #IMPLIED>
+  <!ATTLIST superheroe estado CDATA #IMPLIED>
+]>
+<marvel>
+  <superheroe nombre="Thor"/>
+  <superheroe nombre="Hulk" edad="68" color="verde"/>
+  <superheroe nombre="Iron Man" edad="45" estado="activo" />
+</marvel>

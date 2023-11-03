@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- En el elemento alemanes se a establecido un tipo complejo con la propiedad mixed en true
+Por lo tanto es un elemento mixto-->
+  <xs:element name="alemanes" type="tipoAlemanes" />
+
+  <xs:complexType name="tipoAlemanes" mixed="true">
+    <xs:all>
+      <xs:element name="familia" type="tipoFamilia" />
+      <xs:element name="lugares" type="tipoLugares" />
+    </xs:all>
+  </xs:complexType>
+
+  <!--Este
+  elemento tiene atributtos de diferentes tipos primitivos-->
+  <xs:complexType name="tipoFamilia">
+    <xs:sequence>
+
+      <!--Los
+      elementos mienbro y mascota son vacios-->
+      <xs:element name="miembro" type="tipoMiembro" maxOccurs="unbounded" />
+      <xs:element name="mascota" type="tipoMascota" maxOccurs="unbounded" />
+      <!---->
+
+    </xs:sequence>
+    <!-- Tipo primitivo: xs:string Cadena de caracteres-->
+    <xs:attribute name="nombre" type="xs:string" />
+    <!--Tipo
+    primitivo de tipo numerico: integer-->
+    <xs:attribute name="countPersonas" type="xs:integer" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoNombreMiembro">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Olga" />
+      <xs:enumeration value="Jörg" />
+      <xs:enumeration value="Ursula" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoDni">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}([A-Z]|[a-z])" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoLugares">
+    <xs:sequence>
+      <xs:element name="lugar" type="tipoLugar" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoLugar">
+    <xs:choice>
+      <xs:element name="acontecimiento" type="tipoAcontecimiento" />
+      <xs:element name="personasEnLugar" type="tipoPersonasEnLugar" />
+    </xs:choice>
+    <xs:attribute name="nombre" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="tipoPersonasEnLugar">
+    <xs:simpleContent>
+      <xs:extension base="numericoEntre0y100">
+        <xs:attribute name="nacionalidad" type="tipoNacionalidad" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="numericoEntre0y10000">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="10000" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="numericoEntre0y100">
+    <xs:restriction base="numericoEntre0y10000">
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoAcontecimiento">
+    <xs:attribute name="anio" type="numericoEntre0y10000" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoNacionalidadEuropea">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Española" />
+      <xs:enumeration value="Británica" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoNacionalidadAmericana">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EEUU" />
+      <xs:enumeration value="Peruana" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoNacionalidad">
+    <xs:union memberTypes="tipoNacionalidadEuropea tipoNacionalidadAmericana" />
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoNacionalidades">
+    <xs:list itemType="tipoNacionalidad" />
+  </xs:simpleType>
+
+  <xs:complexType name="tipoMascota">
+    <xs:attribute name="nombre" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="tipoMiembro">
+    <xs:complexContent>
+      <xs:extension base="tipoMascota">
+        <xs:attribute name="dni" type="tipoDni" />
+        <xs:attribute name="nacionalidades" type="tipoNacionalidades" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>

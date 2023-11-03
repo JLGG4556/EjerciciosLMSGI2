@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE superheroes SYSTEM "01-xml-dtd-01.dtd">
+<superheroes>
+	<batalla>
+		<superheroe>Spiderman</superheroe>
+		<supervillano>Venon</supervillano>
+	</batalla>
+	<batalla>
+		<superheroe>Hulk</superheroe>
+		<supervillano>Thanos</supervillano>
+	</batalla>
+</superheroes>

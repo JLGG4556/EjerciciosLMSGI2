@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE superheroes [
+  <!ELEMENT superheroes (superheroe*)>
+  <!ELEMENT superheroe (nombre, poder+,vida?)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT poder (#PCDATA)>
+  <!ELEMENT vida (vivo | muerto)>
+  <!ELEMENT vivo EMPTY>
+  <!ELEMENT muerto EMPTY> 
+]>
+<superheroes>
+  <superheroe>
+    <nombre>Hulk</nombre>
+    <poder>Superfuerza</poder>
+    <poder>Rayos X</poder>
+    <vida><muerto/></vida>
+  </superheroe>  
+  <superheroe>
+    <nombre>Thor</nombre>
+    <poder>Martillo mágico</poder>
+  </superheroe>
+</superheroes>

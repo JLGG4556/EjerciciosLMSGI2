@@ -1,0 +1,4 @@
+<!ELEMENT superheroes (batalla*)>
+<!ELEMENT batalla (superheroe, supervillano)>
+<!ELEMENT superheroe (#PCDATA)>
+<!ELEMENT supervillano (#PCDATA)>

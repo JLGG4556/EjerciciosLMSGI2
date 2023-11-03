@@ -1,0 +1,83 @@
+ <!-- 
+        Separador ","
+
+        Elemento1,Elemento2
+        
+        Estoy indicando que se espera encontrar el elemento1 y el elemento2 los dos
+        en el orden concreto
+        es decir que quiero los dos
+
+        Separador "|" 
+
+        Aparecer el elemento1 o el elemento2 
+        pero no lo dos ni ninguno
+
+    -->
+
+<!DOCTYPE superheroes [
+    <!ELEMENT superheroes (superheroe*)>
+    <!ELEMENT superheroe (nombre,
+    poder+,vida?)> <!--dentro del elemeneto superhero se encontrara si o si los elementos nombre poder y vida-->
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT poder (#PCDATA)>
+    <!ELEMENT vida (vivo | muerto)> <!--Detrp de elemento visa se emcotra el elemento vivo o muerto pero no los dos ni ninguno -->
+    <!ELEMENT vivo EMPTY>
+    <!ELEMENT muerto EMPTY>
+    ]>
+<superheroes>
+
+<superheroe>
+
+<nombre>Hulk</nombre>
+<poder>Superfuerza</poder>
+<poder>Rayos X</poder>
+<vida><muerto/></vida>
+</superheroe>
+
+
+<superheroe>
+<nombre>Thor</nombre>
+<poder>Martillo mágico</poder>
+</superheroe>
+
+</superheroes>
+
+<!--
+  En ocasiones podemos combinar el contenido de un
+elemento para que pueda admitir un conjunto de elementos  
+
+<!ELEMENT vida (#PCDATA | vivo | muerto)*>
+-->
+
+<!DOCTYPE superheroes [
+<!ELEMENT superheroes (superheroe)*>
+<!ELEMENT superheroe (nombre,
+poder+,vida?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT poder (#PCDATA)>
+<!ELEMENT vida (#PCDATA | vivo | muerto)*>
+<!ELEMENT vivo EMPTY>
+<!ELEMENT muerto EMPTY>
+]>
+<superheroes>
+
+<superheroe>
+<nombre>Hulk</nombre>
+<poder>Superfuerza</poder>
+<poder>Indestructible</poder>
+<vida><muerto/></vida>
+</superheroe>
+
+<superheroe>
+<nombre>Thor</nombre>
+<poder>Martillo mágico</poder>
+</superheroe>
+
+<superheroe>
+<nombre>Iron Man</nombre>
+<poder>Armadura</poder>
+<vida>El superheroe está desaparecido
+actualmente</vida>
+</superheroe>
+
+</superheroes>

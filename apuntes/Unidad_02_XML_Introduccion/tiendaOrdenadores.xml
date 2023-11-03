@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda>
+    <articulo codigo="1">
+        <descripcion>Monitor LG 17 pulgadas con &lt;10% de descuento</descripcion>
+        <stock valor="S"/>
+    </articulo>
+    <!-- A continuación otro artículo -->
+    <articulo codigo="2">
+        <descripcion>Portátil HP Pavillion dv5-2345EU</descripcion>
+        <stock valor="N"/>
+    </articulo>
+</tienda>

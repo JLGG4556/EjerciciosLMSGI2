@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--creamos la declaracion doctype no usamos ni system ni public-->
+<!DOCTYPE superheroes [
+<!ELEMENT superheroes (superheroe*)>
+<!ELEMENT superheroe (#PCDATA)>
+]>
+<superheroes>
+<superheroe>Hulk</superheroe>
+<superheroe>Iron Man</superheroe>
+<superheroe>Thor</superheroe>
+</superheroes>

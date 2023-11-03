@@ -1,0 +1,43 @@
+<!--
+    Los atributos de un elemento se pueden declarar en DTD usando el tag
+
+    <!ATTLIST>
+
+    Esta es su sintaxis
+    <!ATTLIST nombreElemento nombreAtributo tipoAtributo caracter>
+
+-->
+<!--
+    Tipos disponibles para caracter
+-->
+<!-- 
+    #IMPLIED el atributo es opcional
+
+    #REQUIRED El atributos es obligatoiirio pero no tiene valor por defecto
+
+    #FIXED El atributos es obligatoiirio tiene un valor por defecto el unico que puede tomar
+-->
+
+<!--
+    Los valores para "tipoAtributo" son:
+
+    CDATA Caracteres sin etiquetas
+
+    ENTITY Una entidad que se declara en el dtd
+
+    ENTITIES Lista de nombres de entidades que se deben especificar en dtd
+
+    ID Indentificador unico en un elemento xml
+
+    IDREF Referencia a un identificador existente 
+
+    IDREFS Varias referencias a identificadores existentes
+
+    NMTOKEN. Nombre sin espacios en blanco en su interior. Los caracteres
+    permitidos en el valor del campo de tipo NMTOKEN son letras, digitos, el
+    punto, el guión, el subrayado y los dos puntos.
+
+    NMTOKENS. Lista de nombres con espacios en blanco en su interior.
+
+    NOTATION. Notación, que debe ser declarada en el DTD.
+-->

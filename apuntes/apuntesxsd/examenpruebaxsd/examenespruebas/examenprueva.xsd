@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Correos" />
+
+  <!--0000000000000000000000000000-->
+  <!-- Este es un elemento vacio-->
+  <xs:element name="CorreoVacio">
+    <xs:complexType />
+  </xs:element>
+  <!--0000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+  <!-- Este es un elemento con contenido mixto para habilitarlo hace falta un complexType mixed
+  true-->
+  <xs:element name="CorreoMixto">
+    <xs:complexType mixed="true">
+      <!-- Choice significa elegir una de la dos no las dos-->
+      <xs:choice>
+
+        <xs:element name="nombre" type="xs:string" />
+        <!-- min occurs significa que el elemento aparece al menos dos veces-->
+        <xs:element name="Codigo" type="textoNoVacio" minOccurs="2" maxOccurs="unbounded"></xs:element>
+
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="textoNoVacio">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--0000000000000000000000000000000000000000000000000000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000000000000000-->
+  <!--Este
+  es un elemento con contenido texto y atributos
+    Este elemento tambien contiene contenido numerico-->
+  <xs:element name="Correoconatributos">
+
+    <xs:complexType>
+      <!-- El elemento contiene valor simple-->
+      <xs:simpleContent>
+        <!-- Indica que estoy ampliando el cantenido base a un xs:string El tipo base es xs:string
+        lo que 
+    significa que el elemento puede contener una cadena de texto-->
+        <xs:extension base="xs:string">
+          <!-- Aqui se define que el atributo se llama informacion 
+      y con tipo de datos de cadena de texto -->
+          <xs:attribute name="informacion" type="xs:string" />
+          <!-- Aqui se define que el atributo se llama informacion 
+      y con tipo de datos numeros enteros -->
+          <xs:attribute name="informacionNumerica" type="xs:integer" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+
+  </xs:element>
+  <!-- 00000000000000000000000000000000000000000000000000000-->
+
+  <!--00000000000000000000000000000000000000000000-->
+  <!--Se
+  usa xs:sequience que obliga a que en el elemento aparezcan los dos elemento en esa secuencia-->
+  <xs:element name="CorreoSecuencia">
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="CorreoSecue1" />
+        <xs:element name="Correasecua2" />
+      </xs:sequence>
+    </xs:complexType>
+
+  </xs:element>
+  <!--0000000000000000000000000000000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000000000-->
+  <!--En
+  este elemento aparece xs:choice que obliga a elegir uno de lo tres
+no se pueden repetir-->
+  <xs:element name="CorreoEleccion">
+
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="Correo1" />
+        <xs:element name="Correo2" />
+        <xs:element name="Correo3" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <!--00000000000000000000000000000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000000000000-->
+  <!--  Aqui se usa xs:all Dentro de este elemento aparecen todos los elementos mencionados sin
+  importar el orden-->
+  <xs:element name="CorreoTodo">
+
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="CorreoUno" />
+        <xs:element name="CorreoDos" />
+        <xs:element name="CorreoTres" />
+        <xs:element name="CorreoCuatro" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <!--000000000000000000000000000000000000000000000000000-->
+
+  <!--00000000000000000000000000000000000000000000000-->
+  <!--8-->
+  <xs:element name="CorreoPosValor">
+
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="KorreoUno" />
+        <xs:enumeration value="KorreoDos" />
+        <xs:enumeration value="KorreoTres" />
+      </xs:restriction>
+    </xs:simpleType>
+
+  </xs:element>
+  <!--0000000000000000000000000000000000000000000000000-->
+
+  <!-- 0000000000000000000000000000000000000000000000000-->
+  <!-- Elemenyo con un atributto cuyo intervarlo esta entre el numero 0 y 100-->
+  <xs:element name="Correo_valores_de_0_a_100" type="Correo0a100" />
+
+  <xs:simpleType name="Correoentre0y100">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="Correo0a100">
+    <xs:simpleContent>
+      <xs:extension base="Correoentre0y100">
+        <xs:attribute name="Cor0y100" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--00000000000000000000000000000000000000000000000000000000000-->
+
+  <!-- 0000000000000000000000000000000000000000000000000-->
+  <!-- Elemenyo con un atributto cuyo intervarlo esta entre el numero 0 y 1000-->
+  <xs:element name="Correo_valores_de_0_a_1000" type="Correo0a1000" />
+
+  <xs:simpleType name="Correoentre0y1000">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="Correo0a1000">
+    <xs:simpleContent>
+      <xs:extension base="Correoentre0y1000">
+        <xs:attribute name="Cor0y100" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!-- 00000000000000000000000000000000000000000000000000-->
+
+
+  <!--0000000000000000000000000000000000000000000000000000-->
+  <!-- Patrones-->
+
+  <xs:element name="CorreoPatronDNI" type="PatronDNI" />
+
+  <xs:simpleType name="PatronDNI">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}([A-Z]|[a-z])" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="CorreoMatricula" type="PatronMatricula" />
+
+  <xs:simpleType name="PatronMatricula">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{4}([A-Z]|[a-z]){3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="CorreoMAC" type="PatronMac" />
+
+  <xs:simpleType name="PatronMac">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9A-Fa-f]{2}.){5}[0-9A-Fa-f]{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="CorreoColor" type="SerieColor" />
+
+  <xs:simpleType name="SerieColor">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Azul" />
+      <xs:enumeration value="Rojo" />
+      <xs:enumeration value="Verde" />
+    </xs:restriction>
+
+  </xs:simpleType>
+  <!--0000000000000000000000000000000000000000000000000000000-->
+
+  <!--00000000000000000000000000000000000000000000000000000000000-->
+  <!-- Aqui se usa el union-->
+  <xs:element name="CorreoUnion" type="UnionDeColorYnumero" />
+
+  <xs:simpleType name="UnionDeColorYnumero">
+    <xs:union memberTypes="UninColor UninNumero" />
+  </xs:simpleType>
+
+  <xs:simpleType name="UninColor">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Azul" />
+      <xs:enumeration value="Rojo" />
+      <xs:enumeration value="Verde" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="UninNumero">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="34" />
+      <xs:enumeration value="14" />
+      <xs:enumeration value="84" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--000000000000000000000000000000000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000000000000-->
+  <!--Datos derivados simples -->
+  <xs:element name="CorreoDerivadoSimple" type="numerodel40a50" />
+
+  <xs:simpleType name="numerodel10al100">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="10" />
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="numerodel40a50">
+    <!-- Al colocar como base el tipo anterior se utiliza la base del anterior junto con sus
+    restriciones-->
+    <xs:restriction base="numerodel10al100">
+      <xs:minInclusive value="40" />
+      <xs:maxExclusive value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!--000000000000000000000000000000000000000000000000000000-->
+
+  <!--000000000000000000000000000000000000000000-->
+  <!--Derivacion de tipos de datos complejos-->
+  <xs:element name="CorreoDerivadoComplejo" type="CorreoDeriva"/>
+
+  <xs:complexType mixed="true" name="CorreoPrimitivo">
+    <xs:sequence>
+      <xs:element name="CorNombre" type="xs:string"/>
+      <xs:element name="CorAmigo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CorreoDeriva">
+    <xs:complexContent mixed="true">
+      <xs:extension base="CorreoPrimitivo">
+        <xs:sequence>
+          <xs:element name="CorreoPrin" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <!--00000000000000000000000000000000000000000000-->
+</xs:schema>

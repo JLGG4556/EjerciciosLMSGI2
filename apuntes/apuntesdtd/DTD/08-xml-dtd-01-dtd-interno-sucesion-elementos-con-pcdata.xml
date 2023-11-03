@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE superheroes [
+  <!ELEMENT superheroes (#PCDATA | superheroe | supervillano | monstruo)*>
+  <!ELEMENT superheroe ANY>
+  <!ELEMENT supervillano ANY>
+  <!ELEMENT monstruo ANY>
+]>
+<superheroes> Los de Marvel
+	<superheroe>Iron Man</superheroe>
+	<supervillano>Thanos</supervillano>
+	<supervillano>Thanos</supervillano>
+	<supervillano>Thanos</supervillano>
+	<monstruo>Monster kripton</monstruo>
+	<supervillano>Thanos</supervillano>
+</superheroes>

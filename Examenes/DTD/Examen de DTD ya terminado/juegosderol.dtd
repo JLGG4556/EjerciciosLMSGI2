@@ -1,0 +1,26 @@
+<!ELEMENT Juego (personajes, villanos, movimientosespeciales?)>
+<!ELEMENT personajes (personaje*)>
+<!ELEMENT villanos (villano+)>
+<!ELEMENT personaje (nombre, nivel, movimiento+, (vivo | muerto?))>
+<!ELEMENT villano (nombre, nivel, movimiento+, (vivo | muerto?))>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT movimiento (#PCDATA)>
+<!ELEMENT vivo EMPTY>
+<!ELEMENT muerto EMPTY>
+
+<!ELEMENT movimientosespeciales (#PCDATA | movimientoespecial)*>
+<!ELEMENT movimientoespecial ANY>
+
+<!ATTLIST personaje numero CDATA #IMPLIED
+                    mote CDATA #REQUIRED
+                    potenciabase CDATA #FIXED "50">
+
+<!ATTLIST villano estado ID #REQUIRED
+                        estados (encubierto | atrapado | descubierto) "encubierto">
+<!ATTLIST movimientoespecial SuperataqueEnEstado IDREF #REQUIRED
+                        superataques IDREFS #IMPLIED>
+
+<!ENTITY % gasto "gasto CDATA #IMPLIED">
+<!ATTLIST  movimientosespeciales %gasto;>
+<!ATTLIST movimiento %gasto;>

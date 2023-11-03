@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe EMPTY>
+  <!ATTLIST superheroe nombre CDATA #FIXED "Thor">
+]>
+<marvel>
+  <superheroe/>
+  <superheroe nombre="Thor"/>
+</marvel>

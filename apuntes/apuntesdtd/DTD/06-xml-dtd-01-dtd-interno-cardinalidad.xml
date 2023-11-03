@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE superheroes [
+  <!ELEMENT superheroes (superheroe*)>
+  <!ELEMENT superheroe (poderes?)>
+  <!ELEMENT poderes (poder+)>
+  <!ELEMENT poder (#PCDATA)>
+]>
+<superheroes> 
+  <superheroe></superheroe>  <!-- No tiene un elemento poderes. Esto es válido -->
+  <superheroe>  <!-- Tiene un sólo elemento poderes y un sólo elemento poder. Esto es válido -->
+    <poderes>
+      <poder>Rayos X</poder>
+    </poderes>
+  </superheroe>
+  <superheroe>  <!-- Tiene un sólo elemento poderes y varios elementos poder. Esto es válido -->
+    <poderes>
+      <poder>Supervelocidad</poder>
+      <poder>Superfuereza</poder>
+    </poderes>  
+  </superheroe>
+</superheroes>

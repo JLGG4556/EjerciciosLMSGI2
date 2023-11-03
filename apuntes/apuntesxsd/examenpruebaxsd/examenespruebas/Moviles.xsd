@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Tienda" />
+
+    <xs:element name="Moviles" type="contiene" />
+
+    <xs:complexType name="contiene" mixed="true">
+        <xs:sequence>
+            <!-- Esto es un un elemento con atributos y contenido texto-->
+            <xs:element name="funda" type="color" />
+            <xs:element name="cargador" type="potencia" />
+            <xs:element name="cable" type="logitudes" />
+            <xs:element name="memoria" type="memorias" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="memorias">
+        <xs:attribute name="tamaño" type="memoria0a100" />
+    </xs:complexType>
+
+    <xs:simpleType name="memoria0a100">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="memo0a100">
+        <xs:simpleContent>
+            <xs:extension base="memoria0a100">
+                <xs:attribute name="Cor0y100" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Correoentre0y1000">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="1000" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="Correo0a1000">
+        <xs:simpleContent>
+            <xs:extension base="Correoentre0y1000">
+                <xs:attribute name="Cor0y100" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="logitudes">
+        <xs:attribute name="logitud" type="listalongitud" />
+    </xs:complexType>
+
+    <xs:simpleType name="listalongitud">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0.5m" />
+            <xs:enumeration value="1.0m" />
+            <xs:enumeration value="1.5m" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Esto es un un elemento con atributos y contenido texto-->
+    <xs:complexType name="color">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="color" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="potencia">
+        <xs:simpleContent>
+            <xs:extension base="xs:double">
+                <xs:attribute name="potencia" type="xs:double" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="texto">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <xs:simpleType name="Numeros">
+        <xs:restriction base="xs:decimal" />
+    </xs:simpleType>
+
+</xs:schema>

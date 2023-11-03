@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alemanes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="alemanes.xsd">
+  Un montón de Alemanes
+  <lugares>
+    <lugar nombre="Berlin">
+      <acontecimiento anio="2021"></acontecimiento>
+    </lugar>
+    <lugar nombre="Praga">
+      <personasEnLugar nacionalidad="Peruana">100</personasEnLugar>
+    </lugar>
+  </lugares>
+
+
+  <familia nombre="Schawtz" countPersonas="3">
+
+    <!--Mienbro y mascota son un elemento vacio-->
+    <miembro nombre="Olga" dni="12345678a"/>
+    <miembro nombre="Jörg" nacionalidades="EEUU Peruana Española Británica"/>
+    <miembro nombre="Ursula"/>
+    <mascota nombre="Princesa"/>
+
+  </familia>
+  
+</alemanes>

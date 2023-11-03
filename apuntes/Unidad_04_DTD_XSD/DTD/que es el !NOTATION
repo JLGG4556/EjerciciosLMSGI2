@@ -1,0 +1,25 @@
+<!--
+    Los elementos <!NOTATION> son elementos avanzados en XML y sirve para declarar
+tipos de atributos que contengan datos de tipo diferente a XML
+
+
+
+
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+<!NOTATION JPG SYSTEM "image/jpeg"> <!--Dato diferente a xml-->
+<!NOTATION GIF SYSTEM "image/gif">
+<!NOTATION PNG SYSTEM "image/png">
+
+<!ELEMENT marvel (superheroe*)>
+<!ELEMENT superheroe (#PCDATA)>
+<!ATTLIST superheroe nombre CDATA #REQUIRED
+
+tipoImagen NOTATION (GIF | JPG | PNG) #IMPLIED>
+<!-- Qui se usa el notation justo en jpg-->
+]>
+<marvel>
+<superheroe nombre="Thor" tipoImagen="JPG">Un Dios</superheroe>
+</marvel>

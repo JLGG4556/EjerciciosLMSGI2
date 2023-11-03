@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (#PCDATA)>
+  <!ENTITY marvel "Ediciones Marvel">
+  <!ENTITY vengadores SYSTEM "superheroes.txt">
+]>
+<marvel>El equipo de vengadores &marvel; consta de &vengadores;</marvel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resultados>
+    <resultado valor="Hoy me he encontrado una &quot;basurilla&quot; en la calle">
+        <equipo tipo="local" goles="1">Real Madrid</equipo>
+        <equipo tipo="visitante" goles="1">FC Barcelona</equipo>
+        <finalizado valor="Sí"/>
+        <apuestas>Por debajo &lt; 500€ </apuestas>
+    </resultado>
+    <resultado valor="1">
+        <equipo tipo="local" goles="2">Betis &lt;El mejón></equipo>
+        <equipo tipo="visitante" goles="1">Sevilla</equipo>
+        <finalizado valor="Sí"/>
+    </resultado>
+    <resultado valor="2">
+        <equipo tipo="local" goles="1">Almería</equipo>
+        <equipo tipo="visitante" goles="3">Málaga</equipo>
+        <finalizado valor="Sí"/>
+    </resultado>
+</resultados> 

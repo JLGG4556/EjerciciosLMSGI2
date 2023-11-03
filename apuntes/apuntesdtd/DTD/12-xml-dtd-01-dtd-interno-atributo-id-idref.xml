@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*, villano*)>
+  <!ELEMENT superheroe EMPTY>
+  <!ELEMENT villano EMPTY>
+  <!ATTLIST superheroe nombre ID #REQUIRED>
+  <!ATTLIST villano nombre CDATA #REQUIRED>
+  <!ATTLIST villano enfrentadoCon IDREFS #IMPLIED>
+]>
+<marvel> 
+  <superheroe nombre="Thor"/>
+  <superheroe nombre="Capitana_Marvel"/>
+  <superheroe nombre="Maria_Gil"/>
+  <superheroe nombre="IronMan"/>
+  <villano nombre="Loki" enfrentadoCon="Thor"/>
+  <villano nombre="Thanos" enfrentadoCon="Thor Capitana_Marvel Maria_Gil IronMan"/>
+</marvel>

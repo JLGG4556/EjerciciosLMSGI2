@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="marvel"/><!--Esto es un elemto-->
+</xs:schema>
+
+<!--Atributos que puede tener el elemento
+name indica el nombre de un elemento
+
+type indica tipo del elemto
+
+"minOccurs": indica la cardinalidad mínima de una colección de
+elementos. Su valor mínimo es 0 y su máximo es "unbounded"
+
+"maxOccurs": indica la cardinalidad máxima de una colección de
+elementos, similar a "minOccurs".
+
+"default": valor por defecto del elemento.
+
+"fixed": único valor posible para el elemento
+<xs:element name="marvel" fixed="un monton de superheroes"/>
+-->

@@ -1,0 +1,27 @@
+<!ELEMENT tienda (sillas, ofertas)>
+<!ELEMENT sillas (silla+)><!-- Se usa el +-->
+<!ELEMENT ofertas (oferta*)><!--Se usa el *-->
+<!ELEMENT silla (nombre, precio, (existencias | agotado?))><!--Secuencia de elementos con optatividad--> <!--Se usa el *-->
+<!ELEMENT nombre (#PCDATA)> <!-- Esto es un elemento mixito-->
+<!ELEMENT existencias (#PCDATA)>
+<!ELEMENT precio EMPTY>
+<!ELEMENT agotado EMPTY><!--Se usa el EMPTY elemento con contenido vacio-->
+<!ELEMENT oferta (#PCDATA | exclusiva)*>
+
+
+<!ELEMENT exclusiva ANY>
+<!--Se utilizan los tres caracteres que pueden tomar los atributos IMPLIED REQUIRED FIXED-->
+<!ATTLIST tienda direccion CDATA #IMPLIED
+                    nombre CDATA #REQUIRED
+                    telefono CDATA #FIXED "555555555">
+
+<!-- Se usa el atributto ID IDREF y IDREFS-->
+<!ATTLIST silla codigo ID #REQUIRED
+                    materiales (cristal | madera | diamante) "cristal">
+<!ATTLIST exclusiva codigosilla IDREF #REQUIRED
+                    sillamixta IDREFS #IMPLIED>
+
+<!ENTITY % atributocoste "coste CDATA #IMPLIED">
+<!ATTLIST precio %atributocoste;>
+<!ATTLIST oferta %atributocoste;>
+<!ENTITY Montada "premontada">

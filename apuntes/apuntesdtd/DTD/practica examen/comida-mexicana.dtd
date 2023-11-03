@@ -1,0 +1,22 @@
+<!ELEMENT restaurante (platos, ofertas)>
+<!ELEMENT platos (plato+)>
+<!ELEMENT ofertas (oferta*)>
+<!ELEMENT plato (nombre, casero?, precio, (existencias | agotado))>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT casero EMPTY>
+<!ELEMENT precio EMPTY>
+<!ELEMENT existencias EMPTY>
+<!ELEMENT agotado EMPTY>
+<!ELEMENT oferta (#PCDATA | platoReferido)*>
+<!ELEMENT platoReferido ANY>
+<!ATTLIST restaurante direccion CDATA #IMPLIED 
+                      nombre CDATA #REQUIRED
+                      telefono CDATA #FIXED "957591456">
+<!ATTLIST plato codigo ID #REQUIRED
+                ingredientePrincipal (queso | frijoles | chile) "queso">
+<!ATTLIST platoReferido codigoPlato IDREF #REQUIRED
+                        platoCombinado IDREFS #IMPLIED>
+<!ENTITY % atributoCoste "coste CDATA #IMPLIED"> 
+<!ATTLIST precio %atributoCoste;>
+<!ATTLIST oferta %atributoCoste;>
+<!ENTITY picante "tres jalapeños">

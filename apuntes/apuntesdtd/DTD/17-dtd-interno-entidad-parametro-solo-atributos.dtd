@@ -1,0 +1,10 @@
+<!ENTITY marvel "Ediciones Marvel">
+<!ENTITY vengadores SYSTEM "superheroes.txt">
+<!ENTITY % caracteristicas "nombre CDATA #REQUIRED color CDATA #IMPLIED">
+   
+<!ELEMENT marvel (superheroe*, villano*)>
+<!ELEMENT superheroe (#PCDATA)>
+<!ATTLIST superheroe  %caracteristicas;>
+  
+<!ELEMENT villano (#PCDATA)>
+<!ATTLIST villano  %caracteristicas;>

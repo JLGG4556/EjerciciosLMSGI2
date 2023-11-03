@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cartelera>
+  <localidad nombre="lucena">
+    <cine nombre="artesiete">
+      <pelicula titulo="guardianes" duracion="59min"
+       sala="1" género="animación" clasificación="TP" url="Youtube.com/98f" 
+       inicio="02/09/13" fin="20/09/13" formato="3D">
+        <horario>
+          <dias L="S" M="S" X="N" J="S" V="S" S="N" D="N">
+            <horario valor="18:30" precio="8" />
+            <horario valor="20:30" precio="8" />
+            <horario valor="23:30" precio="6" />
+          </dias>
+        </horario>
+      </pelicula>
+    </cine>
+  </localidad>
+</cartelera>

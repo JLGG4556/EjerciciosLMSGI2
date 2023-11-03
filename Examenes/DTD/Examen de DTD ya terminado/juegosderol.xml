@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Juego SYSTEM "juegosderol.dtd">
+
+<Juego>
+    <personajes>
+
+        <personaje numero="1" mote="Mufasa" potenciabase="50">
+            <nombre>Ambrosio de la sierra</nombre>
+            <nivel>34</nivel>
+            <movimiento gasto="10PP">Sanacion</movimiento>
+            <vivo />
+        </personaje>
+
+        <personaje numero="1" mote="Musanpe" potenciabase="50">
+            <nombre>Adelio Gomez</nombre>
+            <nivel>30</nivel>
+            <movimiento gasto="10PP">Lanzallamas</movimiento>
+            <muerto />
+        </personaje>
+
+    </personajes>
+
+    <villanos>
+
+       <villano estado="encubierto">
+            <nombre>Ebaristo de los campos</nombre>
+            <nivel>45</nivel>
+            <movimiento gasto="10PP">Sombra maligna chunga</movimiento>
+            <vivo />
+       </villano>
+
+    </villanos>
+
+<movimientosespeciales gasto="45PP">
+    <movimientoespecial SuperataqueEnEstado="encubierto">Super</movimientoespecial>
+</movimientosespeciales>
+
+</Juego>

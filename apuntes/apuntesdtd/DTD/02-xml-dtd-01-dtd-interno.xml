@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE superheroes [
+  <!ELEMENT superheroes (superheroe*)>
+  <!ELEMENT superheroe (poderes?, nombre?)*>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT poderes (poder*)>
+  <!ELEMENT poder (#PCDATA)>
+]>
+<superheroes>
+  <superheroe>
+  	<nombre>Iron Man</nombre>
+  	<poderes>
+  		<poder>Multimillonario</poder>
+  		<poder>Inteligencia</poder>
+  		<poder>Armadura prodigiosa</poder>
+  	</poderes>
+  </superheroe>
+</superheroes>
