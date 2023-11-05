@@ -74,6 +74,7 @@
     <xs:complexType name="potencia">
         <xs:simpleContent>
             <xs:extension base="xs:double">
+                <xs:attribute name="tipo" type="xs:string"/>
                 <xs:attribute name="potencia" type="xs:double" />
             </xs:extension>
         </xs:simpleContent>

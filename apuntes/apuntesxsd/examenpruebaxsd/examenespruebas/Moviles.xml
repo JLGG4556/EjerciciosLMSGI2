@@ -6,7 +6,7 @@ xsi:noNamespaceSchemaLocation="Moviles.xsd">
   <Moviles>
     un monton de moviles
     <funda color="Azul">Super resistente</funda>
-    <cargador potencia="12.5">12.5</cargador>
+    <cargador tipo="carga rapida" potencia="12.5">12.5</cargador>
     <cable logitud="1.0m"/>
     <memoria />
   </Moviles>
