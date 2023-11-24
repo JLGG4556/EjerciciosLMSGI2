@@ -1,0 +1,22 @@
+
+/*Esta es un selector este selector engloba a todos los h2
+*/
+h2 {
+    background-color: rgb(27, 176, 235);
+}
+
+/*Este es un identificador se supone que unico*/
+#identificador {
+    color: rgb(255, 230, 1);
+}
+
+/*esto es una clase*/
+.centrar {
+    text-align: center;
+    color: chocolate;
+}
+
+.margen {
+    margin: 5%;
+    background-color: black;
+}
