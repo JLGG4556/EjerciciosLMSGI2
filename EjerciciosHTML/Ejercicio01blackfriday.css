@@ -73,3 +73,7 @@ p {
 .rojo {
     color: red;
 }
+
+ul {
+    list-style-type: georgian;
+}
