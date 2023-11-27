@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tiendas" type="tipostiedas" />
+
+  <!-- Tipo vacio para elementos vacios-->
+  <xs:complexType name="Vacio" />
+
+  <xs:complexType name="tipostiedas">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="tienda" type="tipotienda" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  -->
+  <xs:complexType name="tipotienda">
+    <!--xs:all
+    obliga a que aparezcan todos los elementos una vez y no se repitan-->
+    <xs:all>
+      <xs:element name="nombre" />
+      <xs:element name="regalos" type="tiporegalos" />
+    </xs:all>
+    <xs:attribute name="cif" />
+    <xs:attribute name="descuentosAplicables" type="descuentosposibles" />
+  </xs:complexType>
+
+  <xs:simpleType name="descuentosposibles">
+    <xs:list itemType="descuentos" />
+  </xs:simpleType>
+
+  <!-- -->
+  <xs:complexType name="tiporegalos">
+
+    <!--Sequence
+    permite generar una secuencia de elemento esa secuencia no se repetir a menos que se use
+    maxoccurs="unbouned"-->
+    <xs:sequence>
+      <xs:element name="regalo" type="tipoderegalo" />
+      <xs:element name="bombazo" type="tipobombazo" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!---->
+  <xs:complexType name="tipobombazo" mixed="true">
+    <xs:sequence>
+      <xs:element name="url" type="patrondedireccion" /><!-- -->
+    </xs:sequence>
+    <xs:attribute name="codigo" type="patroncodigo" />
+  </xs:complexType>
+
+  <!-- el elemento regalo es tipo mixto-->
+  <xs:complexType name="tipoderegalo" mixed="true">
+    <xs:sequence>
+      <xs:element name="url" type="patrondedireccion" /><!-- -->
+      <xs:element name="marca" type="tipodemarcas" />
+    </xs:sequence>
+    <xs:attribute name="codigo" type="patroncodigo" />
+    <xs:attribute name="precio" type="valordeprecio" />
+    <xs:attribute name="iva" type="valordeIVA" />
+    <xs:attribute name="descuento" type="descuentos" />
+  </xs:complexType>
+
+  <xs:simpleType name="valordeprecio">
+    <xs:restriction base="xs:float">
+      <xs:maxInclusive value="10000" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="valordeIVA">
+    <xs:restriction base="valordeprecio">
+      <xs:maxExclusive value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="descuentos">
+    <xs:union memberTypes="tiposdedescuentodel10al15 tiposdedescuentodel20al25"></xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="tiposdedescuentodel10al15">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="10%" />
+      <xs:enumeration value="15%" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tiposdedescuentodel20al25">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="20%" />
+      <xs:enumeration value="25%" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="patroncodigo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d{3}\w{3}\d{3})|(\w{3}\d{3}\w{3})" /> <!--0000-->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Arreglar--><!--000-->
+  <xs:complexType name="patrondedireccion" mixed="true">
+    <xs:attribute name="tipo" />
+  </xs:complexType>
+
+  <!-- Patron para la url-->
+  <!-- <xs:complexType name="">
+<xs:complexContent>
+<xs:restriction base="">
+  xs:pa
+</xs:restriction>
+</xs:complexContent>
+</xs:complexType> -->
+
+  <xs:complexType name="tipodemarcas">
+    <!--xs:chice
+    solo permite elegir uno de los elemnto dentro de choice-->
+    <xs:choice>
+      <xs:element name="mattel" type="Vacio" />
+      <xs:element name="giochiPreziosi" type="Vacio" />
+    </xs:choice>
+  </xs:complexType>
+
+</xs:schema>

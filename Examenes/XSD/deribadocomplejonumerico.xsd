@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="loQueSea" />
+
+    <!--Derivado
+    tipo complejo-->
+    <xs:complexType mixed="true" name="superheroePrimitivo">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="amigo" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="superheroeDerivado">
+        <xs:complexContent mixed="true">
+            <xs:extension base="superheroePrimitivo">
+                <xs:sequence>
+                    <xs:element name="poderPrincipal" type="xs:string" />
+                </xs:sequence>
+                <xs:attribute name="edad" type="xs:string" />
+                <xs:attribute name="color" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <!--Derivado
+    tipo complejo-->
+    <xs:complexType name="tipocliente">
+        <xs:complexContent>
+            <xs:extension base="tipodireccion">
+                <xs:sequence>
+                    <xs:element name="email" type="xs:string" />
+                </xs:sequence>
+                <xs:attribute name="nombre" type="xs:string"></xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="tipodireccion">
+        <xs:sequence>
+            <xs:element name="postal" type="xs:string" />
+            <xs:element name="telefono" type="xs:integer" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Derivado
+    tipo simple-->
+
+    <xs:simpleType name="numero-50-60">
+        <xs:restriction base="numero-10-100"> <!--Tiene la base del tipo numero-10-100-->
+            <xs:minInclusive value="50" />
+            <xs:maxInclusive value="60" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numero-10-100">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="10" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

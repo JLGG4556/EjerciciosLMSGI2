@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BolasDeDragon1"/>
+
+  <xs:element name="historias" type="tipohistoria"/>
+
+  <xs:complexType name="tipohistoria" mixed="true">
+  <xs:all>
+    <xs:element name="Principal" type="PersonajesPrincipal"/>
+    <xs:element name="Secundaria"/>
+  </xs:all>
+</xs:complexType>
+
+<xs:complexType name="PersonajesPrincipal">
+<xs:sequence>
+  <xs:element name="Goku" type="tipoPersonaje"/>
+  <xs:element name="krilin" />
+  <xs:element name="nevera" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoPersonaje">
+ <xs:attribute name="TipoPersonaje" type="Nombres"/>
+ <xs:attribute name="Asesinatos" type="xs:integer"/>
+</xs:complexType>
+
+<xs:simpleType name="Nombres">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Protanista"/>
+    <xs:enumeration value="Villano"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="saga" type="tiposagas"/>
+
+<xs:complexType name="tiposagas">
+  <xs:attribute name="Temporada"/>
+</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BolasDeDragon1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="BolasDeDragon.xsd">
+  un monton de bolas
+
+  <saga Temporada="Z"/> <!--Elemento vacio-->
+
+  <historias>
+    Un monton de historias
+    <Principal>
+      <Goku TipoPersonaje="Protanista" Asesinatos="2"/>
+      <krilin TipoPersonaje="Protanista" Asesinatos="0"/>
+      <nevera TipoPersonaje="Villano" Asesinatos="1233125236"/>
+    </Principal>
+    <Secundaria/>
+  </historias>
+</BolasDeDragon1>
