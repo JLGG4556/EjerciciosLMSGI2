@@ -1,16 +1,76 @@
-th {
-    background-color: green;
-    width: 100%;
+
+body {
+    background-color: black;
 }
 
-table {
-    border-collapse: collapse;
+#tunertabla {
+    font-family: sans-serif;
+    color: white;
 }
 
-th, td {
-    padding: 10px;
+#tunertabla th {
+    background-image: linear-gradient(rgb(18, 1, 255), rgb(0, 18, 119));
+    color: white;
+    text-align: center;
+    padding: 0.3%;
 }
 
-img {
+#tunertabla table {
+    background-position: center;
+    background-size: cover;
+    border-spacing: 0.2cm;
+
+}
+
+#tunertabla th, td {
+    padding: 6px;
+    border: rgb(255, 255, 255) solid 2px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(97, 97, 97);
+    text-align: center;
+    transition: 1s;
+}
+
+td:hover {
+    background-color: rgb(255, 230, 0);
+    transition: 2s;
+    scale: 110%;
+    color: black;
+}
+
+col {
+    text-align: center;
+    background-color: aqua;
+}
+
+.boton {
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    display: inline-block; /*Se adacta a la forma del bloque*/
+    transition: 0.5s;
+}
+
+.boton:hover {
+    background-color: red;
+    translate: -5px 5px;
+    transition: 0.5s;
+    box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.308);
+}
+
+#tunertabla a {
+    text-decoration: none;
+    color: white;
+}
+
+#tunertabla img {
     width: 100px;
+    margin: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: rgb(255, 255, 255) solid 4px;
 }
+
