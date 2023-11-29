@@ -52,6 +52,7 @@ col {
     color: white;
     display: inline-block; /*Se adacta a la forma del bloque*/
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .boton:hover {
