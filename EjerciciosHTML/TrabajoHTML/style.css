@@ -1,0 +1,9 @@
+#Menuprincipal li {
+    display: inline;
+    
+
+}
+
+#Menuprincipal {
+    list-style-type: none;
+}
