@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Registro</title>
+</head>
+
+<body>
+
+    <!--Menu-->
+
+    <div id="CuadroRegistro">
+        <h1>Registra cochazo</h1>
+        <form action="">
+            <div class="Registroparte1">
+                <label for="fname">Nombre del propietario:</label>
+                <input type="text" id="fname" name="fname" value="Señor que esta feliz"><br>
+
+                <h3>Tipo de motor</h3>
+                <input type="radio" id="Diesel" name="motor" value="Diesel">
+                <label for="html">Diesel</label><br>
+                <input type="radio" id="Gasolina" name="motor" value="Gasolina">
+                <label for="css">Gasolina</label><br>
+
+                <h3>Color</h3>
+                <label for="body">Color del Vehiculo</label>
+                <input type="color" id="body" name="body" value="#ffffff" />
+            </div>
+            <div class="Registroparte1">
+                <h3>Color del humo</h3>
+                <input list="Color del humo" name="humo color">
+                <datalist id="Color del humo">
+                    <option value="blanco">
+                    <option value="Gris claro">
+                    <option value="Gris">
+                    <option value="Negro">
+                    <option value="Cancer">
+                </datalist>
+                <h3>Cantidad de bollos</h3>
+                <label for="bollo">Abolladuras (menos a mas)</label> <br>
+                <input type="range" id="bollo" name="bollos" min="0" max="100000">
+                <h3>km recorridos</h3>
+                <label for="km">Cantidad de quilometros recorridos:</label> <br>
+                <input type="number" id="km" name="km recorridos" min="0" max="9999999">
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+
+</html>
