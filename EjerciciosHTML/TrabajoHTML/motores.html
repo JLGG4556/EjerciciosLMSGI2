@@ -5,15 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+
+    <style>
+        .tablac15 {
+            border: solid white 1px;
+            padding: 10px;
+            border-spacing: 15px;
+        }
+
+        .tablac15 th,
+        .tablac15 td {
+            border: solid white 1px;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bolder;
+        }
+
+        .tablac15 tr:nth-child(even) {
+            background-color: rgb(24, 24, 24);
+        }
+
+        .tablac15 tr:nth-child(odd) {
+            background-color: rgb(88, 88, 88);
+        }
+
+        .tablac15 tr:hover td,
+        tr:hover th {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+
     <title>Motores</title>
 </head>
 
 <body>
 
     <!--Menu-->
+
+    
     <div class="fondonegrotrasparente">
-        <h1>Motores</h1>    
-    <table class="tablac15">
+        <h1>Motores</h1>
+        <table class="tablac15">
             <tr>
                 <th></th>
                 <th colspan="4">Motores de gasolina</th>
@@ -154,7 +187,7 @@
                 <td colspan="3">5.6
                 </td>
             </tr>
-        </div>
+    </div>
     </table>
 </body>
 
