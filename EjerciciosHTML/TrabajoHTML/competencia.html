@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        div {
+            margin: 10px;
+        }
+
+        div table {
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.295);
+        }
+
+        div table td img {
+            border-radius: 10px;
+        }
+
+        div table td img:hover,map:hover {
+            transform: scale(1.1);
+        }
+
+        div table td {
+            padding: 10px;
+        }
+
+    </style>
+
+    <title>Competencia</title>
+
+    <map name="image-map">
+        <area target="_blank" alt="enlaceC15" title="enlace1" href="https://es.wikipedia.org/wiki/Renault_Express"
+            coords="48,149,34,137,15,119,15,88,80,74,106,45,126,29,153,21,152,15,169,11,186,11,202,11,212,11,248,10,279,10,283,35,287,55,288,69,290,86,291,102,272,110,272,130,250,122,242,115,153,136,140,150,126,162,105,144,59,140"
+            shape="poly">
+    </map>
+
+    <map name="mapaSeat">
+        <area target="_blank" alt="seat" title="seat" href="https://es.wikipedia.org/wiki/SEAT_Panda"
+            coords="62,171,75,161,111,170,122,163,136,164,137,174,142,189,154,189,165,183,170,172,170,157,240,128,242,140,250,147,254,140,254,126,259,115,268,110,269,98,263,19,148,16,141,44,112,50,88,82,28,108,24,132,36,149,47,170"
+            shape="poly">
+    </map>
+
+</head>
+
+<body>
+    <div class="fondonegrotrasparente">
+        <div>
+            <h1>Competencias</h1>
+            <table>
+                <tr>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id sed doloremque velit quibusdam
+                        voluptate totam rerum non pariatur! Incidunt architecto adipisci necessitatibus vitae doloribus
+                        ea ipsa eius minima suscipit facere.</td>
+                    <td><img src="./imagenes/Renault_Expressmini.jpg" usemap="#image-map"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id sed doloremque velit quibusdam
+                        voluptate totam rerum non pariatur! Incidunt architecto adipisci necessitatibus vitae doloribus
+                        ea ipsa eius minima suscipit facere.</td>
+                    <td><img src="./imagenes/trans 012mini.jpg" usemap="#mapaSeat"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
