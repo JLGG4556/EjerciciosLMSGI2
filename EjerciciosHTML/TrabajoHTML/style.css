@@ -40,7 +40,7 @@ body {
 
   /*divs*/
 
-.fondonegrotrasparente {
+.fondonegrotrasparentetextocentrado {
     background-color: rgba(0, 0, 0, 0.664);
     padding-top: 10px;
     padding-left: 200px;
@@ -61,54 +61,13 @@ body {
   }
 
   .Datosprincipal table {
-    border: 4px solid rgb(197, 197, 197); /*temporal*/
+    border: 4px solid rgb(197, 197, 197);
     border-radius: 50px;
     margin: 30px;
   }
 
   .Datosprincipal table tr td {
     padding: 30px;
-  }
-
-  .Datosprincipal table tr td img {
-    border-radius: 50px;
-    border: rgb(236, 236, 236) 5px solid;
-    width: 400px;
-  }
-
-  .Registroparte1 {
-    border: solid rgb(173, 173, 173) 2px;
-    background-color: rgba(0, 0, 0, 0.664);
-    border-radius: 10px;
-    text-align: left;
-    display: inline-block;
-    line-height: 0.7cm;
-    padding: 20px;
-    margin: 10px;
-    
-  }
-
-  #CuadroRegistro {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.664);
-    padding-top: 2px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: auto;
-    width: 50%;
-    border-radius: 30px;
-  }
-  /**/
-
-  /*Botones del registro*/
-
-  input {
-    background-color: rgb(80, 80, 80);
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    margin: auto;
   }
 
   /**/
