@@ -27,6 +27,11 @@ body {
   .Menuprincipal a:hover {
     background-color: rgb(58, 58, 58);
   }
+
+  .icono-container:hover {
+    transform: scale(1.5); /* Aumenta el tamaño en un 20% */
+    color: red;
+  }
 /**/
 
   .Menuprincipal div {
@@ -39,6 +44,44 @@ body {
   }
 
   /*divs*/
+
+/* Aplica la transformación al hacer hover sobre el contenedor del icono */
+.imagenEnCeldaTabla {
+  width: 70%;
+  
+}
+
+.divTextoImagen {
+  display: flex;
+  flex-direction: row;
+  border: solid white 5px;
+  border-radius: 50px;
+  padding: 50px;
+  margin: 70px;
+}
+
+.celda50responsiva {
+  width: 50%;
+  text-align: center;
+  text-justify: auto;
+}
+
+@media screen and (min--moz-device-pixel-ratio: 2), /* Firefox */
+       screen and (-o-min-device-pixel-ratio: 2/1), /* Opera */
+       screen and (-webkit-min-device-pixel-ratio: 2), /* Safari y Chrome */
+       screen and (min-device-pixel-ratio: 2), /* Resolución de dispositivo general */
+       screen and (min-resolution: 192dpi), /* Resolución de pantalla general */
+       screen and (min-resolution: 2dppx) /* Resolución de pantalla para navegadores más modernos */
+{
+
+  .divTextoImagen {
+    flex-direction: column;
+  }
+
+  .celda50responsiva {
+    width: 100%;
+  }
+}
 
 .fondonegrotrasparentetextocentrado {
     background-color: rgba(0, 0, 0, 0.664);
@@ -90,9 +133,10 @@ body {
 
 /*tablas*/
 
-#Icono:hover {
-    color: red;
-    
+
+.icono-container {
+  transition: transform 0.5s ease;
 }
+
 
 /**/

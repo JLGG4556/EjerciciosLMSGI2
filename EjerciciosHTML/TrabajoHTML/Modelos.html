@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="./style.css">
 
     <style>
-        li div {
-            border: solid 1px white;
+        li div a {
+            background-color: rgba(128, 128, 128, 0.178);
             margin: 10px;
+            display: inline;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 0.2s;
         }
 
-        img {
-            border: white solid 5px;
-            border-radius: 20px;
+        li div a:hover {
+            color: rgb(150, 204, 255);
+            transition: 0.2s;
+        }
+
+        li {
+            margin: 20px;
         }
 
         .Datosprincipal > div {
@@ -32,6 +40,12 @@
             transition: 0.2s;
         }
 
+        img {
+        border-radius: 50px;
+        border: solid 5px white;
+        width: 600px;
+    }
+
     </style>
 
     <title>Modelos</title>
@@ -42,19 +56,19 @@
         <h3>Indice</h3>
         <ol>
             <li>
-                <div>2cv</div>
+                <div><a href="#2cv">2cv</a></div>
             </li>
             <li>
-                <div>acadiane</div>
+                <div><a href="#acadiane">acadine</a></div>
             </li>
             <li>
                 <div>
-                    berlingo
+                    <a href="#berlingo">berlingo</a>
                 </div>
             </li>
             <li>
                 <div>
-                    berlingo 2generacion
+                    <a href="#berlingo 2ºgeneracion">berlingo 2º generacion</a>
                 </div>
             </li>
         </ol>
@@ -62,52 +76,34 @@
 
     <div class="Datosprincipal">
         <div>
-            <table>
-                <tr>
-                    <td>
-                        <p>alkdkaopdkaops</p>
-                    </td>
-                    <td>
-                        <img src="./imagenes/Renault_Expressmini.jpg" alt="">
-                    </td>
-                </tr>
-            </table>
+           <div class="divTextoImagen">
+            <div class="celda50responsiva"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officia sed rerum assumenda necessitatibus ab sit placeat voluptate adipisci alias in id unde, facere voluptas optio provident corporis animi quasi.</p></div>
+            <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+           </div>
         </div>
         <div>
-            <table>
-                <tr>
-                    <td>
-                        <p>alkdkaopdkaops</p>
-                    </td>
-                    <td>
-                        <img src="./imagenes/Renault_Expressmini.jpg" alt="">
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <div class="divTextoImagen">
+                 <div class="celda50responsiva"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est distinctio sunt mollitia veritatis dignissimos corporis quidem nostrum porro fugit quibusdam sit eum numquam, quo modi explicabo consectetur quis culpa facilis.</p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                </div>
+             </div>
         </div>
         <div>
-            <table>
-                <tr>
-                    <td>
-                        <p>alkdkaopdkaops</p>
-                    </td>
-                    <td>
-                        <img src="./imagenes/Renault_Expressmini.jpg" alt="">
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <div class="divTextoImagen">
+                 <div class="celda50responsiva"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente molestias delectus? Possimus soluta at voluptatem, neque est ea adipisci, saepe pariatur quae minus dolorum tempora aperiam ullam, quas exercitationem.</p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                </div>
+             </div>
         </div>
         <div>
-            <table>
-                <tr>
-                    <td>
-                        <p>alkdkaopdkaops</p>
-                    </td>
-                    <td>
-                        <img src="./imagenes/Renault_Expressmini.jpg" alt="">
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <div class="divTextoImagen">
+                 <div class="celda50responsiva"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque pariatur hic molestiae soluta et, dolorum consectetur quisquam totam repudiandae nobis voluptatum culpa commodi enim facilis quos voluptatibus illo excepturi? Est.</p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                </div>
+             </div>
         </div>
     </div>
 </body>
