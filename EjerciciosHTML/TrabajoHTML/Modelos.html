@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         li div a {
             background-color: rgba(128, 128, 128, 0.178);
@@ -21,7 +23,7 @@
             transition: 0.2s;
         }
 
-        li {
+        #indice > li {
             margin: 20px;
         }
 
@@ -52,23 +54,35 @@
 </head>
 
 <body>
+
+    <ul class="Menuprincipal">
+        <li class="Icono" ><a id="Icono " href="./index.html"><i class="fa fa-align-justify  icono-container"></i></a></li>
+        <li><a href="./motores.html">Motores</a></li>
+        <li><a href="./Modelos.html">Modelos</a></li>
+        <li><a href="./Vieojuegos.html">Videojuegos</a></li>
+        <li><a href="./competencia.html">Competencia</a></li>
+        <div>
+            <li><a href="./Regitro.html">Registro</a></li>
+        </div>
+    </ul>
+
     <div class="Datosprincipal">
         <h3>Indice</h3>
-        <ol>
+        <ol id="indice">
+            <li>
+                <div><a href="#c4">c4</a></div>
+            </li>
             <li>
                 <div><a href="#2cv">2cv</a></div>
             </li>
             <li>
-                <div><a href="#acadiane">acadine</a></div>
-            </li>
-            <li>
                 <div>
-                    <a href="#berlingo">berlingo</a>
+                    <a href="#acadiane">acadiane</a>
                 </div>
             </li>
             <li>
                 <div>
-                    <a href="#berlingo 2ºgeneracion">berlingo 2º generacion</a>
+                    <a href="#berlingo">berlingo</a>
                 </div>
             </li>
         </ol>
@@ -77,31 +91,36 @@
     <div class="Datosprincipal">
         <div>
            <div class="divTextoImagen">
-            <div class="celda50responsiva"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officia sed rerum assumenda necessitatibus ab sit placeat voluptate adipisci alias in id unde, facere voluptas optio provident corporis animi quasi.</p></div>
-            <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+            <a name="c4"></a>
+            <div class="celda50responsiva"><p>En 1919 se lanzan los pequeños comerciales de Citroën, año a año crecen, y  desde 1929 son respaldados por auténticos pesos pesado gracias al motor de 6 cilindros del C6. El C4 continua su carrera bajo diferentes denominaciones como la AC4FI.</p></div>
+            <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/c4.png" alt=""></div>
            </div>
         </div>
         <div>
             <div>
                 <div class="divTextoImagen">
-                 <div class="celda50responsiva"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est distinctio sunt mollitia veritatis dignissimos corporis quidem nostrum porro fugit quibusdam sit eum numquam, quo modi explicabo consectetur quis culpa facilis.</p></div>
-                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                    <a name="2cv"></a>
+                 <div class="celda50responsiva"><p>La primera furgoneta con Tracción Delantera, la 2CV AU se convierte rápidamente en un vehículo de culto. Por su vínculo directo con el 2CV. Y por sus cualidades y numerosas versiones siempre acordes con su época. La 2CV AU, AZU, AK, AKS animan tres décadas entre 1951 y 1977, fecha en la cual la Acadiane la remplaza. </p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/2cv.png" alt=""></div>
                 </div>
              </div>
         </div>
         <div>
             <div>
                 <div class="divTextoImagen">
-                 <div class="celda50responsiva"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente molestias delectus? Possimus soluta at voluptatem, neque est ea adipisci, saepe pariatur quae minus dolorum tempora aperiam ullam, quas exercitationem.</p></div>
-                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                    <a name="acadiane"></a>
+                 <div class="celda50responsiva"><p>La furgoneta de 2 CV y sus derivados evolucionaron desde 1951. El último modelo fue la Acadiane, con el frontal de la Dyane y la cabina de la AK 400, que en marzo de 1978 sustituyó a la AK 400 de 2 CV. Fue el vehículo comercial que más éxito tuvo hasta 1987, cuando fue sustituido por el C15.
+                </p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/acadine.png" alt=""></div>
                 </div>
              </div>
         </div>
         <div>
             <div>
                 <div class="divTextoImagen">
-                 <div class="celda50responsiva"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque pariatur hic molestiae soluta et, dolorum consectetur quisquam totam repudiandae nobis voluptatum culpa commodi enim facilis quos voluptatibus illo excepturi? Est.</p></div>
-                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/Renault_Express.jpg" alt=""></div>
+                    <a name="berlingo"></a>
+                 <div class="celda50responsiva"><p>Creada en 1996, esta Berlingo se vuelve famosa por dos razones: primero porque es la primera furgoneta con volumen de carga integrado, y crea el segmento de los vehículos Polivalentes con su versión Multiespace. A pesar de haber una segunda versión a partir del 2008, esta 1era generación subsiste hasta el 2014 en algunos mercados.</p></div>
+                 <div class="celda50responsiva"><img class="imagenEnCeldaTabla" src="./imagenes/berlingo.png" alt=""></div>
                 </div>
              </div>
         </div>
