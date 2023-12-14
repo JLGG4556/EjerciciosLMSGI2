@@ -71,8 +71,27 @@ body {
   display: inline-block;
   background-color: rgba(85, 85, 85, 0.664);
   border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
 }
 
+.menuIzquierda a {
+  
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.2s;
+  
+}
+
+.menuIzquierda a:hover {
+  background-color: rgba(26, 26, 26, 0.562);
+  transition: 0.2s;
+}
+
+.menuIzquierda li {
+  margin: 10px;
+}
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -193,7 +212,7 @@ body {
 
 /* Aplica la transformación al hacer hover sobre el contenedor del icono */
 .imagenEnCeldaTabla {
-  width: 70%;
+  width: 100%;
 
 }
 
@@ -210,6 +229,7 @@ body {
   width: 50%;
   text-align: center;
   text-justify: auto;
+  padding: 10px;
 }
 
 @media screen and (min--moz-device-pixel-ratio: 2),
@@ -241,7 +261,6 @@ screen and (min-resolution: 2dppx)
   padding-left: 200px;
   padding-right: 200px;
   padding-bottom: 100px;
-  margin: auto;
   width: 1000px;
   text-align: center;
   border-radius: 10px;
