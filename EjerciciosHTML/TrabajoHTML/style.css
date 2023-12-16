@@ -284,6 +284,14 @@ screen and (min-resolution: 2dppx)
   padding: 30px;
 }
 
+.pieDePagina {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
 /**/
 
 /*Encabezados*/
