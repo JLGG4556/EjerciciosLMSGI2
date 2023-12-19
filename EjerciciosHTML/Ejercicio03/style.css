@@ -1,0 +1,55 @@
+
+
+/*Formato para la caja que contiene los divs*/
+
+/**/
+
+/*Formato para divs detro de caja*/
+.caja > div {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.cyan {
+    background-color: darkcyan;
+}
+
+.azul {
+    background-color: rgb(45, 185, 231);
+}
+
+.morado {
+    background-color: blueviolet;
+}
+
+.azulOscuro {
+    background-color: darkblue;
+}
+
+.amarillo {
+    background-color: rgb(255, 187, 0);
+}
+
+.naranja {
+    background-color: orange;
+}
+
+.rojo {
+    background-color: rgb(255, 66, 66);
+}
+
+.gris {
+    background-color: gray;
+}
+
+.verde {
+    background-color: seagreen;
+}
+
+.verdeOscuro {
+    background-color: rgb(22, 68, 42);
+}
+/********/
