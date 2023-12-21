@@ -1,0 +1,322 @@
+/*General*/
+
+body {
+  background-image: url(./imagenes/Screenshot_citroen_c15_d_ks_nordschleife_11-11-123-19-14-20.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(71, 71, 71);
+  background-size: cover;
+  /*Fondo*/
+  color: white;
+  font-family: 'Mulish', sans-serif;
+}
+
+.margen {
+  margin: 10px;
+}
+
+.negrita {
+  font-weight: bolder;
+}
+
+.alineadoizquierda {
+  text-align: left;
+}
+
+/**/
+
+.Menuprincipal {
+  list-style-type: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgb(85, 85, 85);
+  color: aliceblue;
+}
+
+.Menuprincipal li {
+  display: inline-block;
+}
+
+/*Botones del menu*/
+.Menuprincipal a {
+  padding: 10px;
+}
+
+.Menuprincipal a:hover {
+  background-color: rgb(58, 58, 58);
+
+}
+
+.icono-container:hover {
+  transform: scale(1.5);
+  /* Aumenta el tamaño en un 20% */
+  color: red;
+}
+
+/**/
+
+.Menuprincipal div {
+  display: inline-block;
+}
+
+.info {
+  display: inline-block;
+  width: 50%;
+}
+
+/*Menu izquierda*/
+
+.menuIzquierda {
+  text-align: left;
+  display: inline-block;
+  background-color: rgba(85, 85, 85, 0.664);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.menuIzquierda a {
+  
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.2s;
+  
+}
+
+.menuIzquierda a:hover {
+  background-color: rgba(26, 26, 26, 0.562);
+  transition: 0.2s;
+}
+
+.menuIzquierda li {
+  margin: 10px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+  .col-1 {
+    width: 3.33%;
+  }
+
+  .col-2 {
+    width: 8%;
+  }
+
+  .col-3 {
+    width: 15%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+/**/
+
+/*divs*/
+
+/* Aplica la transformación al hacer hover sobre el contenedor del icono */
+.imagenEnCeldaTabla {
+  width: 100%;
+
+}
+
+.divTextoImagen {
+  display: flex;
+  flex-direction: row;
+  border: solid white 5px;
+  border-radius: 50px;
+  padding: 50px;
+  margin: 70px;
+}
+
+.celda50responsiva {
+  width: 50%;
+  text-align: center;
+  text-justify: auto;
+  padding: 10px;
+}
+
+@media screen and (min--moz-device-pixel-ratio: 2),
+/* Firefox */
+screen and (-o-min-device-pixel-ratio: 2/1),
+/* Opera */
+screen and (-webkit-min-device-pixel-ratio: 2),
+/* Safari y Chrome */
+screen and (min-device-pixel-ratio: 2),
+/* Resolución de dispositivo general */
+screen and (min-resolution: 192dpi),
+/* Resolución de pantalla general */
+screen and (min-resolution: 2dppx)
+/* Resolución de pantalla para navegadores más modernos */
+  {
+
+  .divTextoImagen {
+    flex-direction: column;
+  }
+
+  .celda50responsiva {
+    width: 100%;
+  }
+}
+
+.fondonegrotrasparentetextocentrado {
+  background-color: rgba(0, 0, 0, 0.664);
+  padding-top: 10px;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 100px;
+  width: 1000px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.Datosprincipal {
+  background-color: rgba(0, 0, 0, 0.664);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.Datosprincipal table {
+  border: 4px solid rgb(197, 197, 197);
+  border-radius: 50px;
+  margin: 30px;
+}
+
+.Datosprincipal table tr td {
+  padding: 30px;
+}
+
+.pieDePagina {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/**/
+
+/*Encabezados*/
+h1 {
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+
+/**/
+/*enlaces*/
+a {
+  text-decoration: none;
+  color: white;
+
+}
+
+/**/
+
+/*tablas*/
+
+
+.icono-container {
+  transition: transform 0.5s ease;
+}
+
+
+/**/

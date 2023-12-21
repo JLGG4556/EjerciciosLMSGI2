@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Ejercicio03/style.css">
-    <title>Ejercicio4</title>
+    <title>Ejercicio8</title>
 
     <style>
         .caja {
             display: flex;
+            
             /* flex es igual a inline-flex. Los elementos dentro de un flex son flex-items */
             border: 10px solid red;
-            height: 15vh;
+            height: 100vh;
             /* Utiliza el 100% del alto del viewport (parte visible de la página) */
             box-sizing: border-box;
             /* Unifica en un único valor de cada div los siguientes: margin, padding y border*/
         }
 
         .caja>div {
-            flex: 1;
             color: white;
             font-size: 100px;
             text-align: center;
@@ -27,13 +27,52 @@
             padding: 10px;
         }
 
-        .amarillo {
-            order: -1;
-        }
+        /*Formato para divs detro de caja*/
 
-        .naranja {
-            order: 1;
-        }
+
+.cyan {
+   align-self: start;
+}
+
+.azul {
+    align-self: flex;
+}
+
+.morado {
+    align-self: start;
+}
+
+.azulOscuro {
+    align-self: start;
+}
+
+.amarillo {
+    align-self: start;
+}
+
+.naranja {
+    align-self: center;
+    
+}
+
+.rojo {
+    align-self: start;
+}
+
+.gris {
+    align-self: start;
+}
+
+.verde {
+    align-self: flex-end;
+}
+
+.verdeOscuro {
+    align-self: start;
+}
+/********/
+
+
     </style>
 
 </head>

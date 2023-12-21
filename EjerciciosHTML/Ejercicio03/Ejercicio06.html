@@ -4,36 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Ejercicio03/style.css">
-    <title>Ejercicio4</title>
+    <!--<link rel="stylesheet" href="../Ejercicio03/style.css">-->
+    <title>Ejercicio6</title>
 
     <style>
         .caja {
             display: flex;
             /* flex es igual a inline-flex. Los elementos dentro de un flex son flex-items */
             border: 10px solid red;
-            height: 15vh;
+            height: 100vh;
             /* Utiliza el 100% del alto del viewport (parte visible de la página) */
             box-sizing: border-box;
             /* Unifica en un único valor de cada div los siguientes: margin, padding y border*/
+            align-items: baseline
         }
 
         .caja>div {
-            flex: 1;
             color: white;
-            font-size: 100px;
+            
             text-align: center;
             text-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
-            padding: 10px;
+            
+        }
+
+        /*Formato para divs detro de caja*/
+
+
+        .cyan {
+            background-color: darkcyan;
+            font-size: 30px;
+        }
+
+        .azul {
+            background-color: rgb(45, 185, 231);
+            font-size: 50px;
+        }
+
+        .morado {
+            background-color: blueviolet;
+            font-size: 100px;
+        }
+
+        .azulOscuro {
+            font-size: 150px;
+            background-color: darkblue;
         }
 
         .amarillo {
-            order: -1;
+            background-color: rgb(255, 187, 0);
         }
 
         .naranja {
-            order: 1;
+            background-color: orange;
+            font-size: 50px;
         }
+
+        .rojo {
+            background-color: rgb(255, 66, 66);
+            font-size: 50px;
+        }
+
+        .gris {
+            background-color: gray;
+            font-size: 50px;
+        }
+
+        .verde {
+            background-color: seagreen;
+            font-size: 50px;
+        }
+
+        .verdeOscuro {
+            background-color: rgb(22, 68, 42);
+            font-size: 40px;
+        }
+
+        /********/
     </style>
 
 </head>

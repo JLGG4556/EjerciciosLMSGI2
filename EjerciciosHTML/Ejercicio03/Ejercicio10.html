@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Ejercicio03/style.css">
+
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Ejercicio10</title>
+
+    <style>
+        .caja {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex: 1;
+            /* flex es igual a inline-flex. Los elementos dentro de un flex son flex-items */
+            border: 10px solid red;
+            height: 100vh;
+            /* Utiliza el 100% del alto del viewport (parte visible de la página) */
+            box-sizing: border-box;
+            /* Unifica en un único valor de cada div los siguientes: margin, padding y border*/
+        }
+
+        .caja>div {
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
+            padding: 10px;
+        }
+
+        .cyan {
+            flex-grow: 4;
+        }
+
+        .azul {
+            flex-grow: 4;
+        }
+
+        .morado {
+            flex-grow: 4;
+        }
+
+        .azulOscuro {
+           flex-grow: 1;
+        }
+
+        .amarillo {
+            flex-grow: 5;
+        }
+
+        .naranja {
+            flex-grow: 5;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="caja">
+        <div class="cyan">Uno <i class="fa fa-smile-o"></i></div>
+        <div class="azul">Dos <i class="fa fa-soccer-ball-o"></i></div>
+        <div class="morado">Tres <i class="fa fa-star"></i></div>
+        <div class="azulOscuro">Cuatro <i class="fa fa-automobile"></i></div>
+        <div class="amarillo">Cinco <i class="fa fa-balance-scale"></i></div>
+        <div class="naranja">Seis <i class="fa fa-bolt"></i></div>
+    </div>
+</body>
+
+</html>
