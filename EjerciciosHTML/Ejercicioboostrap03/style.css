@@ -1,0 +1,57 @@
+.fondonaranja {
+    background-color: rgb(255, 153, 0);
+}
+
+.logo {
+    width: 70%;
+}
+
+.logo2 {
+    width: 30%;
+}
+
+.miniatura {
+    width: 100px;
+    height: 100px;
+}
+
+.fondogrisclaro {
+    background-color: rgb(226, 226, 226);
+}
+
+/* Estilo para quitar el borde y fondo de las cartas */
+.card-no-border {
+    border: none;
+}
+
+.card-no-background {
+    background: none;
+}
+
+.borde-grande {
+    border-bottom: black 2px solid;
+}
+
+.borde-punteadogrisclaro {
+    border-bottom: lightgrey 2px dashed;
+}
+
+.cuadrado {
+    border-radius: 0px;
+}
+
+.contenedor-limitado {
+    max-height: 800px;
+    /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+    /* Añade una barra de desplazamiento vertical si el contenido es más largo */
+}
+
+.naranja {
+    color: rgb(255, 153, 0);
+    ;
+}
+
+.borde-negro {
+    border: solid 2px black;
+}
