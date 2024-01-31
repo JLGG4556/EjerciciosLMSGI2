@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'tamaños';
+
+body {
+    background-color: $Blanco;
+}
+
+.textoVerde {
+    color: $Verde;
+}
+
+.imgrescalada {
+    width: $pequenio;
+}
