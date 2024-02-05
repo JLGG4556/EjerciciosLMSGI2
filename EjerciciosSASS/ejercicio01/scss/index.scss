@@ -1,14 +1,20 @@
 @import 'colors';
 @import 'tamaños';
 
+/*Los metodos deben de ir primero*/
+@mixin pintacolor($c) {
+    color: $c;
+}
+
 body {
     background-color: $Blanco;
 }
 
 .textoVerde {
-    color: $Verde;
+    @include pintacolor($Verde);
 }
 
 .imgrescalada {
     width: $pequenio;
 }
+
