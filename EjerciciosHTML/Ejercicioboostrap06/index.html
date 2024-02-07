@@ -21,163 +21,231 @@
 
 <body>
     <!--Menu-->
-    <!--Menu-->
-    <!--Carrusel-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="text-center bg-secondary p-5">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="m-5">
-                        <p class="text-white h1">Another example headline</p>
-                        <p class="text-white">Some represnative placeholder content for the second slide of the carousel
-                        </p>
-                        <button class="btn btn-primary">Lear more</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-auto bg-dark sticky-top">
+                <div class="d-flex flex-sm-column flex-row flex-nowrap align-items-center sticky-top">
+                    <a href="/" class="d-block p-3 text-decoration-none" title="" data-bs-toggle="tooltip"
+                        data-bs-placement="right" data-bs-original-title="Icon-only">
+                        <i class="bi-bootstrap fs-1"></i>
+                    </a>
+                    <ul
+                        class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link py-3 px-2 text-white" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Home">
+                                Carousel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2 text-white" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Dashboard">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2 text-white" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Orders">
+                                Link
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 px-2 text-white" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Products">
+                                Disabled
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dropdown">
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-person-circle h2"></i>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                            <li><a class="dropdown-item" href="#">New project...</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="text-end bg-secondary p-5">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="m-5">
-                        <p class="text-white h1">One more for good measure</p>
-                        <p class="text-white">Some represnative placeholder content for the second slide of the carousel
-                        </p>
-                        <button class="btn btn-primary">Browse gallery</button>
+            <div class="col-sm min-vh-100">
+                <!-- content -->
+                <!--Carrusel-->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="bg-secondary p-5">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="m-5">
-                        <p class="text-white h1">Example headline</p>
-                        <p class="text-white">Some represnative placeholder content for the second slide of the carousel
-                        </p>
-                        <button class="btn btn-primary">Browse gallery</button>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-center bg-secondary p-5">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="m-5">
+                                    <p class="text-white h1">Another example headline</p>
+                                    <p class="text-white">Some represnative placeholder content for the second slide of
+                                        the carousel
+                                    </p>
+                                    <button class="btn btn-primary">Lear more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-end bg-secondary p-5">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="m-5">
+                                    <p class="text-white h1">One more for good measure</p>
+                                    <p class="text-white">Some represnative placeholder content for the second slide of
+                                        the carousel
+                                    </p>
+                                    <button class="btn btn-primary">Browse gallery</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-secondary p-5">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="m-5">
+                                    <p class="text-white h1">Example headline</p>
+                                    <p class="text-white">Some represnative placeholder content for the second slide of
+                                        the carousel
+                                    </p>
+                                    <button class="btn btn-primary">Browse gallery</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!--Carrusel-->
+                <!--Carrusel-->
 
-    <!--Circulos-->
-    <div class="container mt-5">
-        <!--Circulos-->
-        <div class="row text-center">
-            <div class="col-lg-4 mt-5">
-                <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
-                <p class="h4">Heading</p>
-                <p>Some represnative placeholder content for the second slide of the carousel. this is the first column </p>
-                <button class="btn btn-secondary" >View details >></button>
-            </div>
-            <div class="col-lg-4 mt-5">
-                <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
-                <p class="h4">Heading</p>
-                <p>Some represnative placeholder content for the second slide of the carousel. this is the first column </p>
-                <button class="btn btn-secondary" >View details >></button>
-            </div>
-            <div class="col-lg-4 mt-5">
-                <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
-                <p class="h4">Heading</p>
-                <p>Some represnative placeholder content for the second slide of the carousel. this is the first column </p>
-                <button class="btn btn-secondary" >View details >></button>
-            </div>
-            <!--Circulos-->
-            <!--Rectangulos-->
-        </div>
-        <hr class="my-5">
-        <div class="row mt-5">
-            <div class="col">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!--Texto-->
-                        <div class="col-lg-6">
-                            <p class="h1">Oh yeah, it's that good. See for yourseft</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi quo. </p>
+                <!--Circulos-->
+                <div class="container mt-5">
+                    <!--Circulos-->
+                    <div class="row text-center">
+                        <div class="col-lg-4 mt-5">
+                            <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
+                            <p class="h4">Heading</p>
+                            <p>Some represnative placeholder content for the second slide of the carousel. this is the
+                                first column </p>
+                            <button class="btn btn-secondary">View details >></button>
                         </div>
-                        <!--Texto-->
-                        <!--Imagen-->
-                        <div class="col-lg-6">
-                            <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                        <div class="col-lg-4 mt-5">
+                            <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
+                            <p class="h4">Heading</p>
+                            <p>Some represnative placeholder content for the second slide of the carousel. this is the
+                                first column </p>
+                            <button class="btn btn-secondary">View details >></button>
                         </div>
-                        <!--Imagen-->
+                        <div class="col-lg-4 mt-5">
+                            <img src="https://dummyimage.com/100x100/9c9c9c/969696" alt="" class="circulo">
+                            <p class="h4">Heading</p>
+                            <p>Some represnative placeholder content for the second slide of the carousel. this is the
+                                first column </p>
+                            <button class="btn btn-secondary">View details >></button>
+                        </div>
+                        <!--Circulos-->
+                        <!--Rectangulos-->
                     </div>
-                </div>
-            </div>
-        </div>
-        <hr class="my-5">
-        <div class="row mt-5">
-            <div class="col">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!--Imagen-->
-                        <div class="col-lg-6">
-                            <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                    <hr class="my-5">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!--Texto-->
+                                    <div class="col-sm-6">
+                                        <p class="h1">Oh yeah, it's that good. See for yourseft</p>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur
+                                            beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi
+                                            quo. </p>
+                                    </div>
+                                    <!--Texto-->
+                                    <!--Imagen-->
+                                    <div class="col-sm-6">
+                                        <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                                    </div>
+                                    <!--Imagen-->
+                                </div>
+                            </div>
                         </div>
-                        <!--Imagen-->
-                        <!--Texto-->
-                        <div class="col-lg-6">
-                            <p class="h1">Oh yeah, it's that good. See for yourseft</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi quo. </p>
-                        </div>
-                        <!--Texto-->
                     </div>
-                </div>
-            </div>
-        </div>
-        <hr class="my-5">
-        <div class="row mt-5">
-            <div class="col">
-                <div class="container">
-                    <div class="row">
-                        <!--Texto-->
-                        <div class="col-lg-6">
-                            <p class="h1">Oh yeah, it's that good. See for yourseft</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi quo. </p>
+                    <hr class="my-5">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!--Texto-->
+                                    <div class="col-sm-6 order-sm-2">
+                                        <p class="h1">Oh yeah, it's that good. See for yourseft</p>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur
+                                            beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi
+                                            quo. </p>
+                                    </div>
+                                    <!--Texto-->
+                                    <!--Imagen-->
+                                    <div class="col-sm-6 order-sm-1">
+                                        <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                                    </div>
+                                    <!--Imagen-->
+
+                                </div>
+                            </div>
                         </div>
-                        <!--Texto-->
-                        <!--Imagen-->
-                        <div class="col-lg-6">
-                            <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                    </div>
+                    <hr class="my-5">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="container">
+                                <div class="row">
+                                    <!--Texto-->
+                                    <div class="col-sm-6">
+                                        <p class="h1">Oh yeah, it's that good. See for yourseft</p>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi pariatur
+                                            beatae praesentium voluptates deleniti quisquam dolores et, veritatis sequi
+                                            quo. </p>
+                                    </div>
+                                    <!--Texto-->
+                                    <!--Imagen-->
+                                    <div class="col-sm-6">
+                                        <img src="https://dummyimage.com/400x400/d1d1d1/969696" alt="">
+                                    </div>
+                                    <!--Imagen-->
+                                </div>
+                            </div>
                         </div>
-                        <!--Imagen-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--Menu-->
+
 </body>
 
 </html>
