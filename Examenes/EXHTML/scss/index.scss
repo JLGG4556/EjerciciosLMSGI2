@@ -1,0 +1,19 @@
+@import 'colors';
+@import 'borde';
+
+@mixin pintacolor($c) {
+    color: $c;
+}
+
+.grisclaro {
+    @include pintacolor($grisclaro)
+}
+
+.fondogrisclaro {
+   background-color: $grisclaro;
+}
+
+.redonda {
+    border-radius: $redondo;
+
+}
