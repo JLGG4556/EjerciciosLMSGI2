@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<celebracion nombre='comidad Navidad'>
+    <menu>
+        <plato>
+            Patatas bravas    
+        </plato>
+        <plato>
+            Entrecot ternera 1ª
+        </plato>
+        <plato>
+            Danonino
+        </plato>
+    </menu>
+    <epirituosas>
+        <babida nombre='licor de hierbas'/>
+        <babida nombre='Cocala zero'/>
+        <babida nombre='Fanta naranja'/>
+    </epirituosas>
+</celebracion>
