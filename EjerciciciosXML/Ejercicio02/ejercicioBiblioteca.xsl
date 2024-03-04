@@ -4,4 +4,11 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    <xsl:template match="libro">
+        
+        <xsl:apply-templates/>
+        
+    </xsl:template>
+    
+    
 </xsl:stylesheet>
