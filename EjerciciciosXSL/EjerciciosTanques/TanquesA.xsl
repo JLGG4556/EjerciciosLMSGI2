@@ -50,6 +50,7 @@
                                 </xsl:call-template>
                                 <!-- NOTA es importante dejar encerrada completamente la variable podrian entra caracteres especiales -->
                             </td>
+                            <td><xsl:value-of select="@desc"/></td>
                         </tr>
                     </xsl:for-each>
                 </table>

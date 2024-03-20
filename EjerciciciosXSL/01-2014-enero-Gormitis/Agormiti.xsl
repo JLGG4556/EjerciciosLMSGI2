@@ -8,19 +8,6 @@
     <xsl:template match="/gormitis">
         <!--Suponiendo que encontrao ese elemento entro en el-->
         <html>
-            <head>
-                <title>Gormitis</title>
-                <!-- Estilo para el fichero html -->
-                <style type="text/css">
-                    th {
-                    background: #090f7d;
-                    color: #FFFFFF;
-                    }
-                    img {
-                    width: 50px;
-                    }
-                </style>
-            </head>
             <body>
                 <table  width="50%" align="center">
                     <tr>
