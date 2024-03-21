@@ -10,8 +10,9 @@
                 <title>PrimerDia1DAW</title>
                 <!-- Estilo para el fichero html -->
                 <style type="text/css">
-                    table {
+                    table, th, td {
                     border: 1px solid black;
+                    border-collapse: collapse;
                     }
                 </style>
             </head>
@@ -32,18 +33,25 @@
                     <th>
                         <xsl:value-of select="@desc" />
                     </th>
-                    <xsl:apply-templates/>
+                    <!-- seleciono un template que haga math con hora -->
+                    <xsl:apply-templates select="hora"/>
                 </tr>
             </xsl:for-each>
         </table>
     </xsl:template>
     
-    <xsl:template match="primerDia1DAWA/horario/dia">
-        <xsl:for-each select="hora">
+    <xsl:template match="hora">
             <td>
-                <xsl:value-of select="." />
+                <xsl:variable name="materia"><xsl:value-of select="."/></xsl:variable>
+                <xsl:choose>
+                    <xsl:when test="$materia = PROG">
+                        <xsl:attribute name="style">background-color: aqua;</xsl:attribute>
+                    </xsl:when>
+                </xsl:choose>
+                <xsl:value-of select="." >
+                    
+                </xsl:value-of>
             </td>
-        </xsl:for-each>
     </xsl:template>
 
 </xsl:stylesheet>
