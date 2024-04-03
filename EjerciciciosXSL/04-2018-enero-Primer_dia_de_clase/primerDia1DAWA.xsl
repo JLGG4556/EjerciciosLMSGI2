@@ -18,7 +18,10 @@
             </head>
             <!-- /////////////////////BODY/////////////////// -->
             <body>
-                <xsl:call-template name="tablaHorario"/>
+                <table>
+                    <!-- **********Uso apply templates **************-->
+                    <xsl:apply-templates select="horario/dia"/>
+                </table>
             </body>
             <!-- /////////////////////BODY/////////////////// -->
         </html>
@@ -26,49 +29,36 @@
 
 
     <!-- //////////////////////TEMPLATE//////////////////////////// -->
-    <xsl:template name="tablaHorario">
-        <table>
-            <xsl:for-each select="horario/dia">
-                <tr>
-                    <th>
-                        <xsl:value-of select="@desc" />
-                    </th>
-                    <!-- seleciono un template que haga math con hora -->
-                    <xsl:apply-templates select="hora"/>
-                </tr>
+    <xsl:template match="horario/dia">
+        <tr>
+            <td><xsl:value-of select="@desc"/></td>
+            <xsl:for-each select="hora">
+                <!-- *********************Las materias son ordenadas ************************ -->
+                <!-- Ordeno las materias con el atributo orden que tiene el elemento hora -->
+                <xsl:sort select="@orden"/>
+                <!-- ***************** Uso call template y se pansan parametos **************************** -->
+                <xsl:call-template name="celdaConColor">
+                    <xsl:with-param name="materia"> <!-- Parametro materia con valor del elemento hora  -->
+                        <xsl:value-of select="."/>
+                    </xsl:with-param>
+                    <!-- ******************** Las celdas se mustran colores alternos ************************* -->
+                    <xsl:with-param name="color"> <!-- Segundo parametro usando position -->
+                        <xsl:choose>
+                            <xsl:when test="position() mod 2 = 1">lightblue;</xsl:when>
+                            <xsl:otherwise>white;</xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:with-param>
+                </xsl:call-template>
             </xsl:for-each>
-        </table>
+        </tr>
     </xsl:template>
     
-    <xsl:template match="hora">
-            <td>
-                <!-- Creo la variable materia con el valor que hay dentro del elemnto -->
-                <xsl:variable name="materia"><xsl:value-of select="."/></xsl:variable>
-                <!-- Elijo un color segun el valor de la materia -->
-                <xsl:choose>
-                    <xsl:when test="$materia = 'PROG'">
-                        <xsl:attribute name="style">background-color: aqua;</xsl:attribute>
-                    </xsl:when>
-                    <xsl:when test="$materia = 'BBDD'">
-                        <xsl:attribute name="style">background-color: purple;</xsl:attribute>
-                    </xsl:when>
-                    <xsl:when test="$materia = 'FOL'">
-                        <xsl:attribute name="style">background-color: green;</xsl:attribute>
-                    </xsl:when>
-                    <xsl:when test="$materia = 'LMSGI'">
-                        <xsl:attribute name="style">background-color: blue;</xsl:attribute>
-                    </xsl:when>
-                    <xsl:when test="$materia = 'ENT DES'">
-                        <xsl:attribute name="style">background-color: yellow;</xsl:attribute>
-                    </xsl:when>
-                    <xsl:when test="$materia = 'SIST INF'">
-                        <xsl:attribute name="style">background-color: lightblue;</xsl:attribute>
-                    </xsl:when>
-                </xsl:choose>
-                <xsl:value-of select="." >
-                    
-                </xsl:value-of>
-            </td>
+    <xsl:template name="celdaConColor">
+        <xsl:param name="color"/>
+        <xsl:param name="materia"/>
+        <td style="background:{$color};">
+            <xsl:value-of select="$materia"/>
+        </td>
     </xsl:template>
-
+    
 </xsl:stylesheet>

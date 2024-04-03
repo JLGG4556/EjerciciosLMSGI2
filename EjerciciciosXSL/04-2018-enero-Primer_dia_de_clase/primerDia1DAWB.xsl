@@ -80,21 +80,10 @@
         <xsl:for-each select="estructuraAula/bloque">
             <xsl:if test="@x = $x and @y = $y">
                 <!-- si las variables x e y coinciden con los atributos del elemento ago algo -->
-                <xsl:choose>
-                    <xsl:when test="@tipo = 'puerta'">
-                            <!-- Aqui estan las columnas -->
-                            <xsl:attribute name="style">background-color: rgb(255, 75,31)</xsl:attribute> 
-                            puerta 
-                    </xsl:when>
-                    <xsl:when test="@tipo = 'pared'">
-                            <xsl:attribute name="style">background-color: rgb(251, 255,0)</xsl:attribute> 
-                            pared 
-                    </xsl:when>
-                    <xsl:when test="@tipo = 'ventana'">
-                            <xsl:attribute name="style">background-color: rgb(0, 153,255)</xsl:attribute>
-                            ventana
-                    </xsl:when>
-                </xsl:choose>
+                <xsl:variable name="tipoBloque"><xsl:value-of select="@tipo"/></xsl:variable>
+                <!-- Elijo el color que esta guardado en el elemto -->
+                <xsl:attribute name="style">background: #<xsl:value-of select="/primerDia1DAW/estructuraAula/color[@tipo=$tipoBloque]"/>;</xsl:attribute>
+                <xsl:value-of select="@tipo"/>
 
             </xsl:if>
         </xsl:for-each>
