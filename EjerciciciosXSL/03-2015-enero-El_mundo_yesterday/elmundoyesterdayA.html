@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs"
-    version="2.0">
-    
-    <xsl:template match="periodico">
-        <html>
-            <head>
-                <title>El mundo yesterday</title>
-                <style>
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>El mundo yesterday</title>
+      <style>
                     body {
                     font-family: Arial;
                     font-size: 12px;
@@ -69,43 +64,18 @@
                     .divPublicidad img {
                     width: 200px;
                     }
-                </style> 
-            </head>
-            <body>
-                <xsl:apply-templates select="menu"/>
-            </body>
-        </html>
-        
-    </xsl:template>
-    
-    <xsl:template match="menu">
-        <div>
-            <xsl:attribute name="style">width: 1000px; margin: 0px; padding: 0px;</xsl:attribute>
-            <xsl:attribute name="id">menu</xsl:attribute>
-            <ul>
-                <xsl:for-each select="enlace">
-                    <li>
-                        <xsl:call-template name="color">
-                            <xsl:with-param name="post"><xsl:value-of select="position()"/></xsl:with-param>
-                        </xsl:call-template>
-                        
-                        <a href="#"><xsl:value-of select="."/></a>
-                    </li>
-                </xsl:for-each>
-            </ul>
-        </div>
-    </xsl:template>
-    
-    <xsl:template name="color">
-        <xsl:param name="post"></xsl:param>
-        <xsl:choose>
-            <xsl:when test="$post mod 2 = 0">
-                <xsl:attribute name="style">background:#DDE640;</xsl:attribute>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:attribute name="style">background:orange;</xsl:attribute>
-            </xsl:otherwise>
-        </xsl:choose>      
-    </xsl:template>
-    
-</xsl:stylesheet>
+                </style>
+   </head>
+   <body>
+      <div style="width: 1000px; margin: 0px; padding: 0px;" id="menu">
+         <ul>
+            <li style="background:orange;"><a href="#">Nacional</a></li>
+            <li style="background:#DDE640;"><a href="#">Internacional</a></li>
+            <li style="background:orange;"><a href="#">Sociedad</a></li>
+            <li style="background:#DDE640;"><a href="#">Cultura</a></li>
+            <li style="background:orange;"><a href="#">Ciencia</a></li>
+            <li style="background:#DDE640;"><a href="#">Deportes</a></li>
+         </ul>
+      </div>
+   </body>
+</html>
