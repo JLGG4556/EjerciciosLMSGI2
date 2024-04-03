@@ -4,4 +4,10 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    <xsl:template match="periodico">
+        <body>
+            cosa
+        </body>
+    </xsl:template>
+    
 </xsl:stylesheet>
