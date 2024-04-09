@@ -13,20 +13,45 @@
             <body>
                 <div>
                     <xsl:attribute name="style">width: 1000px; margin: 0 auto;</xsl:attribute>
-                    <!-- /////////////////////////////BANNER///////////////////////////// -->
+                    
                     <div>
-                        <img>
-                            <xsl:attribute name="scr"><xsl:value-of select="@logo"/></xsl:attribute>
-                        </img>
+                        <xsl:attribute name="style">width: 1000px;</xsl:attribute>
+                        
+                        <!-- Paso de parametros -->
+                        <xsl:call-template name="banner"> <!-- ///BANNER/// -->
+                            <xsl:with-param name="ancho">997</xsl:with-param>
+                            <xsl:with-param name="alto">115</xsl:with-param>
+                        </xsl:call-template> <!-- ///BANNER/// -->
                     </div>
-                    <!-- /////////////////////////////BANNER///////////////////////////// -->
-                    <xsl:apply-templates select="menu"/>
+                    
+                    <xsl:apply-templates select="menu"/> <!-- ///MENU/// -->
+                    <div>
+                        <xsl:attribute name="style">width: 700px; float: left;</xsl:attribute>
+                        <xsl:apply-templates select="noticias"/> <!-- ///NOTICIAS/// -->
+                    </div>
+                    
+                    <div>
+                        <xsl:attribute name="style">width: 295px; float: right;</xsl:attribute>
+                        <xsl:apply-templates select="publicidad"/> <!-- ///ADDS/// -->
+                    </div>
+                    
                 </div>
             </body>
         </html>
         
     </xsl:template>
     
+    <!-- /////////////////////////////BANNER///////////////////////////// -->
+    <xsl:template name="banner">
+        <xsl:param name="alto"/>
+        <xsl:param name="ancho"/>
+        <img>
+            <xsl:attribute name="src"><xsl:value-of select="@logo"/></xsl:attribute>
+            <xsl:attribute name="width"><xsl:value-of select="$ancho"/></xsl:attribute>
+            <xsl:attribute name="height"><xsl:value-of select="$alto"/></xsl:attribute>
+        </img>
+    </xsl:template>
+    <!-- /////////////////////////////BANNER///////////////////////////// -->
     
     <!-- /////////////////////////////MENU////////////////////////////////// -->
     <xsl:template match="menu">
@@ -55,7 +80,53 @@
     </xsl:template>
     <!-- /////////////////////////////MENU////////////////////////////////// -->
     
-    <!-- /////////////////////////////MENU////////////////////////////////// -->
+    <!-- /////////////////////////////NOTICIAS////////////////////////////////// -->
+    <xsl:template match="noticias">
+        <xsl:for-each select="noticia">
+            <div>
+                <xsl:choose>
+                    <xsl:when test="@dobleAncho = 's'">
+                        <xsl:attribute name="class">noticiaDobleAncho</xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="class">noticia</xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+                <h2><xsl:value-of select="titular"/></h2>
+                <h4><xsl:value-of select="subtitular"/></h4>
+                <img>
+                    <xsl:attribute name="src"><xsl:value-of select="@imagen"/></xsl:attribute>
+                </img>
+                <span>
+                    <xsl:attribute name="class">fechaNoticia</xsl:attribute>
+                    <xsl:value-of select="@fecha"/>
+                </span>
+                <span>
+                    <xsl:attribute name="class">comentariosNoticia</xsl:attribute>
+                    <xsl:value-of select="@comentarios"/> comentarios
+                </span>
+            </div>
+        </xsl:for-each>
+    </xsl:template>
+    <!-- /////////////////////////////NOTICIAS////////////////////////////////// -->
+    
+    <!-- /////////////////////////////ADDS///////////////////////////////////// -->
+    <xsl:template match="publicidad">
+        <xsl:for-each select="anuncio">
+            <xsl:sort select="@orden"/>
+            <div>
+                <xsl:attribute name="class">divPublicidad</xsl:attribute>
+                <img>
+                    <xsl:attribute name="src"><xsl:value-of select="@imagen"/></xsl:attribute>
+                </img>
+            </div>
+            
+        </xsl:for-each>
+    </xsl:template>
+    <!-- /////////////////////////////ADDS///////////////////////////////////// -->
+    
+    <!-- /////////////////////////////STYLE////////////////////////////////// -->
     <xsl:template name="css">
         <style>
             body {
@@ -120,6 +191,6 @@
             }
         </style> 
     </xsl:template>
-    <!-- /////////////////////////////MENU////////////////////////////////// -->
+    <!-- /////////////////////////////STYLE////////////////////////////////// -->
     
 </xsl:stylesheet>
